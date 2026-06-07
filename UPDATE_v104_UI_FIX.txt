@@ -1,0 +1,13 @@
+DIANAFARM GROUP — v104 UI/UX fix
+
+Changes:
+1. Reworked filter controls for real estate, cars and parking: removed native select dropdowns and added custom premium dropdowns.
+2. Filter panels now visually sit as a luxury toolbar before listings, with dark glass background, gold borders, hover/focus states and clean option menus.
+3. Improved consultation modal: removed double rectangular inner borders, made inputs cleaner, softer and more premium.
+4. Rebuilt language switcher behavior visually as RU/BG/KA/EN dropdown with an arrow, similar to the services menu.
+5. Preserved existing pages, content, admin, forms and routing.
+
+Checks:
+- app.js syntax OK
+- data.js evaluated OK
+- local HTML refs check OK

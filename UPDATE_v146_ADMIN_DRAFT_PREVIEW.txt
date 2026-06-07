@@ -1,0 +1,7 @@
+v146 admin draft preview
+- Added a separate admin draft storage.
+- Public pages can be opened with ?preview=draft to see draft content before publishing.
+- Editor modal now has Publish, Save draft, Preview buttons.
+- Contacts editor can also save and preview draft values.
+- Public app disables remote sync in draft preview so Supabase/live data does not overwrite the preview.
+- Draft preview banner added on public pages.

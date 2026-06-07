@@ -1,0 +1,7 @@
+v241 premium stack beams
+
+- Service hero right-side cards rebuilt into a premium staggered stack.
+- Added a thin route line connecting the 3 stacked hero cards.
+- Added large diagonal animated light beams across service hero screens.
+- When the mouse moves over a beam, that beam lights up in a warm golden tone.
+- Applied to all service hero pages included in the v240 signature heroes set.

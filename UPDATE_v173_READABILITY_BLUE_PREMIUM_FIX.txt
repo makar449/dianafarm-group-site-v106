@@ -1,0 +1,8 @@
+V173 targeted fix:
+- Removed blur/filter reveal effect that made service pages look smeared.
+- Rebuilt service hero grid so long titles no longer overlap right-side cards.
+- Rebalanced UAE / Asia / blog hero right side and removed empty premium space.
+- Improved blog hero with right-side premium showcase instead of dead air.
+- Fixed process blocks so words do not break vertically and arrows appear only between steps.
+- Improved service cards readability on light panels and aligned Подробнее buttons.
+- Tightened footer logo and contact line alignment.

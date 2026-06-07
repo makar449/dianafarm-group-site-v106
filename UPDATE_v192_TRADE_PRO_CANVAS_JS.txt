@@ -1,0 +1,1 @@
+v192: International Trade only. Real visible canvas globe, external JS self-mounting, critical inline CSS to bypass cache, no grid gap.

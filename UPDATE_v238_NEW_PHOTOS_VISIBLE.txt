@@ -1,0 +1,8 @@
+v238 new photos visible
+
+- New uploaded photos copied into assets/img/v238/.
+- Real estate, UAE / Dubai, Uzbekistan / Asia and Blog hero sections now use real <img> tags, not only CSS background variables.
+- This makes photos display reliably on GitHub Pages and local preview.
+- Old hero animations / old guide blocks removed from those hero screens.
+- Bottom animation blocks kept, with larger drawings inside the same frame.
+- Real estate filter premium layout kept and fixed to avoid overlapping text.

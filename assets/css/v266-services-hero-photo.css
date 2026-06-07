@@ -1,0 +1,348 @@
+
+/* v266 — real implementation of the requested 'Все услуги' full-photo hero.
+   Uses the provided/generated premium globe image as real website background,
+   not as a separate generated picture.
+*/
+
+body[data-page="services"] .v266-services-hero-photo,
+body[data-page="services"] .v9-page-hero.v9-hero-services.v266-services-hero-photo{
+  position:relative !important;
+  min-height:clamp(760px, 52vw, 930px) !important;
+  padding:0 !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  border-bottom:1px solid rgba(214,173,111,.18) !important;
+  background:#06111f !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .v9-page-hero__bg{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-3 !important;
+  background-image:var(--hero-img) !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+  opacity:1 !important;
+  transform:none !important;
+  filter:none !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(90deg,
+      rgba(4,10,19,.92) 0%,
+      rgba(5,13,24,.72) 28%,
+      rgba(5,13,24,.34) 52%,
+      rgba(4,10,19,.45) 76%,
+      rgba(4,10,19,.72) 100%),
+    linear-gradient(180deg,
+      rgba(3,9,18,.18) 0%,
+      rgba(3,9,18,.05) 42%,
+      rgba(3,9,18,.74) 100%);
+}
+
+body[data-page="services"] .v266-services-hero-photo::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 19% 47%, rgba(0,0,0,.36), transparent 31%),
+    radial-gradient(circle at 67% 44%, rgba(223,170,86,.12), transparent 23%),
+    radial-gradient(circle at 86% 34%, rgba(115,185,255,.08), transparent 25%);
+}
+
+body[data-page="services"] .v266-services-hero-photo .container.v9-page-hero__grid{
+  width:min(1500px, calc(100% - 72px)) !important;
+  min-height:inherit !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) minmax(420px, 520px) !important;
+  gap:clamp(56px, 7vw, 112px) !important;
+  align-items:center !important;
+  padding-top:clamp(96px, 7vw, 135px) !important;
+  padding-bottom:clamp(72px, 6vw, 120px) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .v9-page-hero__copy{
+  position:relative !important;
+  z-index:2 !important;
+  max-width:780px !important;
+  margin:0 !important;
+  padding:0 !important;
+  filter:none !important;
+  transform:none !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .breadcrumbs{
+  margin:0 0 28px !important;
+  color:rgba(255,247,230,.86) !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+  letter-spacing:.16em !important;
+  text-transform:uppercase !important;
+}
+body[data-page="services"] .v266-services-hero-photo .breadcrumbs a{
+  color:#e7bb72 !important;
+}
+body[data-page="services"] .v266-services-hero-photo .breadcrumbs span{
+  color:rgba(255,247,230,.78) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .services-title-v199{
+  margin:0 !important;
+  color:#fff4e5 !important;
+  text-shadow:0 18px 42px rgba(0,0,0,.34) !important;
+  max-width:880px !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .services-title-v199__lead{
+  display:block !important;
+  font-family:Georgia, 'Times New Roman', serif !important;
+  font-size:clamp(74px, 6.4vw, 128px) !important;
+  line-height:.86 !important;
+  letter-spacing:-.055em !important;
+  color:#fff4e5 !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .services-title-v199__phrase{
+  position:relative !important;
+  display:inline-block !important;
+  margin-top:clamp(52px, 4.6vw, 76px) !important;
+  font-family:Georgia, 'Times New Roman', serif !important;
+  font-size:clamp(34px, 3.25vw, 58px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.04em !important;
+  color:#fff4e5 !important;
+  white-space:normal !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .services-title-v199__phrase::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:-14px !important;
+  width:min(250px, 50%) !important;
+  height:2px !important;
+  background:linear-gradient(90deg, rgba(235,188,111,.96), rgba(235,188,111,.22), transparent) !important;
+  border-radius:999px !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .v9-page-hero__copy > p{
+  max-width:620px !important;
+  margin:34px 0 0 !important;
+  color:rgba(255,247,236,.82) !important;
+  font-size:clamp(16px, 1.08vw, 20px) !important;
+  line-height:1.6 !important;
+  text-shadow:0 10px 24px rgba(0,0,0,.45) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero__actions{
+  margin-top:34px !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:18px !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .btn{
+  min-height:58px !important;
+  padding:0 32px !important;
+  border-radius:9px !important;
+  font-size:14px !important;
+  font-weight:950 !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+  box-shadow:none !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .btn--primary{
+  min-width:332px !important;
+  background:linear-gradient(135deg, #ffe2aa 0%, #d8964a 100%) !important;
+  border:1px solid rgba(255,229,180,.44) !important;
+  color:#07111d !important;
+  box-shadow:0 22px 48px rgba(218,150,74,.18), inset 0 1px 0 rgba(255,255,255,.30) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .btn--primary::after{
+  content:"→" !important;
+  margin-left:18px !important;
+  font-size:24px !important;
+  line-height:0 !important;
+  font-weight:500 !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .btn--ghost{
+  min-width:286px !important;
+  background:rgba(4,12,23,.38) !important;
+  border:1px solid rgba(255,234,202,.35) !important;
+  color:#fff8ed !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero__trust-panel,
+body[data-page="services"] .v266-services-hero-photo .v9-trust-panel{
+  position:relative !important;
+  z-index:2 !important;
+  display:grid !important;
+  gap:20px !important;
+  align-self:center !important;
+  margin:0 !important;
+  padding:0 !important;
+  filter:none !important;
+  transform:none !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero__trust-panel::before{
+  content:"" !important;
+  position:absolute !important;
+  left:79px !important;
+  top:84px !important;
+  bottom:84px !important;
+  width:2px !important;
+  z-index:1 !important;
+  background:linear-gradient(180deg,
+    transparent,
+    rgba(240,193,112,.38),
+    rgba(255,217,150,.90),
+    rgba(240,193,112,.38),
+    transparent) !important;
+  box-shadow:0 0 20px rgba(244,190,104,.30) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature{
+  position:relative !important;
+  z-index:2 !important;
+  display:grid !important;
+  grid-template-columns:86px minmax(0,1fr) !important;
+  gap:24px !important;
+  align-items:center !important;
+  min-height:150px !important;
+  padding:26px 32px 26px 28px !important;
+  border-radius:28px !important;
+  overflow:hidden !important;
+  background:linear-gradient(135deg, rgba(9,23,40,.50), rgba(8,22,39,.26)) !important;
+  border:1px solid rgba(255,248,236,.25) !important;
+  box-shadow:
+    0 26px 70px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  border-radius:inherit !important;
+  background:linear-gradient(120deg, rgba(255,255,255,.10), transparent 34%, rgba(230,176,92,.06) 100%) !important;
+  opacity:.55 !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature__icon{
+  position:relative !important;
+  z-index:3 !important;
+  width:68px !important;
+  height:68px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  border:1px solid rgba(241,196,119,.68) !important;
+  background:rgba(5,15,29,.42) !important;
+  color:#e8b96d !important;
+  box-shadow:0 0 0 7px rgba(218,163,85,.055), 0 0 24px rgba(218,163,85,.16) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature__icon svg{
+  width:34px !important;
+  height:34px !important;
+  stroke:currentColor !important;
+  stroke-width:1.65 !important;
+  fill:none !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature strong{
+  position:relative !important;
+  z-index:3 !important;
+  display:block !important;
+  margin:0 0 12px !important;
+  color:#fff5e8 !important;
+  font-family:Georgia, 'Times New Roman', serif !important;
+  font-size:clamp(24px, 2vw, 32px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.035em !important;
+  text-shadow:0 12px 28px rgba(0,0,0,.32) !important;
+}
+
+body[data-page="services"] .v266-services-hero-photo .hero-feature p{
+  position:relative !important;
+  z-index:3 !important;
+  margin:0 !important;
+  color:rgba(255,247,236,.78) !important;
+  font-size:clamp(14px, .95vw, 17px) !important;
+  line-height:1.48 !important;
+}
+
+/* Keep the services catalog below normal; only hero gets the full photo. */
+body[data-page="services"] .section--v9-services{
+  position:relative !important;
+  z-index:3 !important;
+  margin-top:0 !important;
+}
+
+/* Responsive safety */
+@media (max-width:1200px){
+  body[data-page="services"] .v266-services-hero-photo .container.v9-page-hero__grid{
+    grid-template-columns:1fr !important;
+    gap:42px !important;
+    padding-top:100px !important;
+    width:min(980px, calc(100% - 48px)) !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .hero__trust-panel{
+    max-width:620px !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .hero__trust-panel::before{
+    left:61px !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .hero-feature{
+    grid-template-columns:70px minmax(0,1fr) !important;
+  }
+}
+
+@media (max-width:720px){
+  body[data-page="services"] .v266-services-hero-photo{
+    min-height:auto !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .container.v9-page-hero__grid{
+    width:calc(100% - 28px) !important;
+    padding-top:82px !important;
+    padding-bottom:64px !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .services-title-v199__lead{
+    font-size:clamp(56px, 17vw, 82px) !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .services-title-v199__phrase{
+    margin-top:38px !important;
+    font-size:clamp(30px, 9vw, 45px) !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .btn,
+  body[data-page="services"] .v266-services-hero-photo .btn--primary,
+  body[data-page="services"] .v266-services-hero-photo .btn--ghost{
+    width:100% !important;
+    min-width:0 !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .hero-feature{
+    grid-template-columns:1fr !important;
+    min-height:0 !important;
+    padding:24px !important;
+  }
+  body[data-page="services"] .v266-services-hero-photo .hero__trust-panel::before{
+    display:none !important;
+  }
+}

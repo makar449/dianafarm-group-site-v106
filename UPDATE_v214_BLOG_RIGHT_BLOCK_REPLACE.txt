@@ -1,0 +1,5 @@
+v214:
+- Removed the overflowing blog right block "Навигация по темам / Материалы...".
+- Added a new compact premium guide block with 4 clean topic cards.
+- Added CSS guard to hide the old blog-hero-showcase block if cached HTML/CSS conflicts remain.
+- Cache bust updated to v=214.

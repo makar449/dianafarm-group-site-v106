@@ -1,0 +1,1 @@
+v249 checked global gateway: fixed JS syntax issue, checked asset references, checked CSS braces, added UAE/ASIA globe labels, extra responsive guard for review card, cache bumped to v249.

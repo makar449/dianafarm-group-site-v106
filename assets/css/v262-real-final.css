@@ -1,0 +1,416 @@
+
+/* v262 REAL FINAL FIXES — last stylesheet + inline fallback */
+
+/* --- HARD RESET OF LAGGY ANIMATION LAYERS --- */
+.global-gateway-pro,
+.global-gateway,
+.global-gateway--cinematic,
+.gg-pro-camera,
+.gg-pro-globe,
+.gg-pro-object,
+.gg-pro-panel,
+.gg-pro-brand,
+.gg-pro-particles,
+.gg-pro-filmgrain,
+.gg-pro-cinematic-haze,
+.gg-pro-bloom,
+.gg-pro-cinematic-sweep,
+.gg-ultra-depth-fog,
+.gg-ultra-stage-reflection,
+.gg-ultra-brand-flare{
+  animation:none !important;
+  filter:none !important;
+}
+
+/* --- 3D animation: premium but lightweight, no lag --- */
+.v238-motion-stage{
+  min-height:clamp(560px,52vw,700px) !important;
+  max-height:760px !important;
+  overflow:hidden !important;
+  border-radius:34px !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(92,164,242,.20), transparent 31%),
+    radial-gradient(circle at 50% 60%, rgba(225,181,105,.09), transparent 38%),
+    linear-gradient(180deg, #07162b 0%, #020914 100%) !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:0 26px 80px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.09) !important;
+  transform:translateZ(0) !important;
+}
+.v238-motion-stage canvas{display:none !important;}
+.v238-motion-stage::before,
+.v238-motion-stage::after{display:none !important;}
+
+.v261-gateway{
+  position:absolute !important;
+  inset:22px !important;
+  border-radius:30px !important;
+  overflow:hidden !important;
+  contain:layout paint !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(107,184,255,.18), transparent 29%),
+    radial-gradient(circle at 48% 56%, rgba(235,190,112,.10), transparent 34%),
+    linear-gradient(180deg, rgba(8,26,48,.58), rgba(3,12,24,.82)) !important;
+  border:1px solid rgba(255,255,255,.11) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.09) !important;
+}
+.v261-gateway__bg{
+  animation:v262Bg 10s ease-in-out infinite !important;
+}
+.v261-gateway__grid{
+  opacity:.24 !important;
+}
+.v261-globe{
+  width:clamp(250px,25vw,355px) !important;
+  top:43.5% !important;
+  animation:v262Globe 10s ease-in-out infinite !important;
+  filter:drop-shadow(0 0 36px rgba(106,184,255,.34)) !important;
+}
+.v261-globe__surface{
+  background:
+    radial-gradient(circle at 26% 17%, rgba(255,255,255,.52), transparent 14%),
+    radial-gradient(circle at 64% 43%, rgba(91,170,255,.76), transparent 43%),
+    conic-gradient(from 34deg, transparent, rgba(255,216,144,.15), transparent, rgba(122,190,255,.14), transparent),
+    linear-gradient(145deg, #1b528f, #061421 73%) !important;
+  box-shadow:inset -44px -34px 72px rgba(0,0,0,.62), inset 19px 16px 46px rgba(178,226,255,.25) !important;
+}
+.v261-globe__grid{opacity:.50 !important;}
+.v261-gateway__route{
+  height:1.4px !important;
+  animation:v262Route 10s ease-in-out infinite !important;
+}
+.v261-object{
+  animation:v262Object 10s ease-in-out infinite !important;
+  filter:drop-shadow(0 22px 30px rgba(0,0,0,.34)) !important;
+}
+.v261-panel{
+  width:min(70%, 462px) !important;
+  min-height:116px !important;
+  bottom:10% !important;
+  background:linear-gradient(180deg, rgba(27,57,91,.50), rgba(7,17,32,.76)) !important;
+  border:1px solid rgba(220,234,247,.32) !important;
+  box-shadow:0 22px 64px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.12) !important;
+  animation:v262Panel 10s ease-in-out infinite !important;
+}
+.v261-panel strong{
+  font-size:clamp(24px,2.4vw,42px) !important;
+}
+.v261-brand{
+  animation:v262Brand 10s ease-in-out infinite !important;
+  background:rgba(8,18,32,.34) !important;
+}
+@keyframes v262Bg{0%,100%{transform:scale(1);}50%{transform:scale(1.025);}}
+@keyframes v262Globe{
+  0%{opacity:0;transform:translate(-50%,-50%) rotateY(-28deg) scale(.78);}
+  12%{opacity:1;transform:translate(-50%,-50%) rotateY(-14deg) scale(1);}
+  68%{opacity:1;transform:translate(-50%,-50%) rotateY(16deg) scale(1.02);}
+  100%{opacity:1;transform:translate(-50%,-50%) rotateY(28deg) scale(1);}
+}
+@keyframes v262Route{
+  0%,24%{opacity:0;clip-path:inset(0 100% 0 0);}
+  44%,84%{opacity:1;clip-path:inset(0 0 0 0);}
+  100%{opacity:.45;}
+}
+@keyframes v262Object{
+  0%,28%{opacity:0;transform:translateY(18px) scale(.90);}
+  44%,84%{opacity:1;transform:translateY(0) scale(1);}
+  100%{opacity:.86;}
+}
+@keyframes v262Panel{
+  0%,54%{opacity:0;transform:translate(-50%,24px) scale(.92);}
+  68%,100%{opacity:1;transform:translate(-50%,0) scale(1);}
+}
+@keyframes v262Brand{
+  0%,70%{opacity:0;transform:translate(-50%,10px);}
+  84%,100%{opacity:1;transform:translate(-50%,0);}
+}
+
+/* --- 1) Review card: text never crosses frame --- */
+body[data-page="reviews"] .reviews-vertical,
+body[data-page="reviews"] .reviews-vertical--premium{
+  width:min(100%, 590px) !important;
+  min-height:620px !important;
+  height:620px !important;
+  overflow:hidden !important;
+  border-radius:40px !important;
+}
+body[data-page="reviews"] .reviews-vertical::before{
+  inset:24px !important;
+  border-radius:32px !important;
+  border:1.6px solid rgba(184,194,208,.58) !important;
+}
+body[data-page="reviews"] .reviews-vertical::after{
+  right:38px !important;
+  top:36px !important;
+  opacity:.55 !important;
+}
+body[data-page="reviews"] .reviews-vertical .review-card{
+  inset:50px 38px 38px !important;
+  padding:38px 32px 32px !important;
+  border-radius:30px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:space-between !important;
+  gap:18px !important;
+  background:linear-gradient(180deg, rgba(15,36,66,.48), rgba(5,16,31,.58)) !important;
+  border:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+body[data-page="reviews"] .review-card__top,
+body[data-page="reviews"] .review-card__footer{
+  flex-shrink:0 !important;
+}
+body[data-page="reviews"] .review-card p{
+  margin:0 !important;
+  font-size:clamp(15px,1.02vw,18px) !important;
+  line-height:1.52 !important;
+  max-width:100% !important;
+  overflow-wrap:break-word !important;
+}
+body[data-page="reviews"] .review-card__footer{
+  display:block !important;
+  margin:0 !important;
+}
+body[data-page="reviews"] .review-card__footer strong{
+  display:block !important;
+  font-size:clamp(14px,.95vw,17px) !important;
+  line-height:1.18 !important;
+  letter-spacing:.07em !important;
+}
+body[data-page="reviews"] .review-card__footer span{
+  display:block !important;
+  margin-top:6px !important;
+  font-size:clamp(12px,.86vw,15px) !important;
+}
+
+/* --- 2 and 4) Cards transparent, not blurry / not milky --- */
+.hero-feature,
+.v103-hero-proof article,
+.v238-direction-hero__panel .hero-feature,
+body[data-page="reviews"] .reviews-list-grid article,
+body[data-page^="service-"] .v103-value-grid article,
+body[data-page^="service-"] .v10-process article,
+body[data-page^="service-"] .v8-process article,
+body[data-page^="service-"] .v122-rich-cards article,
+body[data-page="home"] .v9-home-process article,
+body[data-page="home"] .v8-process article{
+  background:linear-gradient(145deg, rgba(11,31,58,.34), rgba(5,16,31,.52)) !important;
+  border:1px solid rgba(210,220,232,.20) !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  filter:none !important;
+  box-shadow:0 18px 46px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+
+/* --- 3) International contour title fits: moved left, smaller, without bigger card --- */
+body[data-page="reviews"] .reviews-list-grid{
+  grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+body[data-page="reviews"] .reviews-list-grid article{
+  min-height:250px !important;
+  padding:28px 24px 24px !important;
+}
+body[data-page="reviews"] .reviews-list-grid h3{
+  margin:18px 0 12px -8px !important;
+  font-size:clamp(23px,1.85vw,32px) !important;
+  line-height:.96 !important;
+  letter-spacing:-.04em !important;
+  max-width:11ch !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+body[data-page="reviews"] .reviews-list-grid h3.v262-fit-title{
+  margin-left:-12px !important;
+  max-width:10.7ch !important;
+}
+body[data-page="reviews"] .reviews-list-grid h3.v262-fit-title span{
+  display:block !important;
+  white-space:nowrap !important;
+}
+body[data-page="reviews"] .reviews-list-grid p{
+  font-size:clamp(14px,.96vw,17px) !important;
+  line-height:1.55 !important;
+}
+
+/* --- 4) Blog page: blocks transparent + title/buttons lifted upward --- */
+body[data-page="blog"] .v9-page-hero.v9-hero-blog,
+body[data-page="blog"] .v238-direction-hero{
+  padding-top:86px !important;
+  padding-bottom:58px !important;
+}
+body[data-page="blog"] .v9-page-hero__copy,
+body[data-page="blog"] .v238-direction-hero__copy{
+  margin-top:-38px !important;
+  padding-top:0 !important;
+  align-self:start !important;
+}
+body[data-page="blog"] .hero-title--split,
+body[data-page="blog"] h1{
+  margin-top:0 !important;
+}
+body[data-page="blog"] .hero__lead{
+  margin-top:18px !important;
+}
+body[data-page="blog"] .hero__actions{
+  margin-top:18px !important;
+}
+body[data-page="blog"] .v238-direction-hero__panel{
+  margin-top:-24px !important;
+}
+body[data-page="blog"] .hero-feature{
+  background:linear-gradient(145deg, rgba(11,31,58,.30), rgba(5,16,31,.48)) !important;
+}
+
+/* --- 6) Loader restored, but cannot hang forever --- */
+#pageLoader{
+  display:flex !important;
+  opacity:1;
+  visibility:visible;
+}
+#pageLoader.is-hidden,
+html.dfg-loader-removed #pageLoader,
+body.dfg-loader-removed #pageLoader{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+/* --- 7) Real estate stats table width reduced 50% desktop --- */
+body[data-page="real-estate"] .v10-page-proof > .container{
+  width:min(50vw, 760px) !important;
+  max-width:760px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+body[data-page="real-estate"] .v10-page-proof__grid{
+  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  gap:14px !important;
+  padding:16px !important;
+  background:linear-gradient(145deg, rgba(11,31,58,.36), rgba(5,16,31,.54)) !important;
+  border:1px solid rgba(210,220,232,.18) !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+body[data-page="real-estate"] .v10-page-proof__item{
+  min-height:108px !important;
+  padding:16px !important;
+  grid-template-columns:52px minmax(0,1fr) !important;
+  gap:12px !important;
+}
+body[data-page="real-estate"] .v10-page-proof__item:last-child{
+  grid-column:auto !important;
+}
+body[data-page="real-estate"] .v10-page-proof__icon{
+  width:46px !important;
+  height:46px !important;
+}
+body[data-page="real-estate"] .v10-page-proof__item strong{
+  font-size:clamp(24px,2vw,40px) !important;
+}
+body[data-page="real-estate"] .v10-page-proof__item span:not(.v10-page-proof__icon){
+  font-size:clamp(12px,.85vw,15px) !important;
+  line-height:1.28 !important;
+}
+
+/* --- 8) Real estate section title/link exactly centered --- */
+body[data-page="real-estate"] .section--v9-realestate-list .v9-section-row{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  gap:12px !important;
+}
+body[data-page="real-estate"] .section--v9-realestate-list .v9-section-row > div,
+body[data-page="real-estate"] .section--v9-realestate-list .v9-section-row .text-link{
+  width:100% !important;
+  text-align:center !important;
+  justify-content:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* --- 9) Home Result card: exact same frame/size/color as other cards --- */
+body[data-page="home"] .v9-home-process,
+body[data-page="home"] .v8-process.v9-home-process{
+  display:grid !important;
+  grid-template-columns:repeat(4, minmax(0,1fr)) !important;
+  align-items:stretch !important;
+  gap:20px !important;
+}
+body[data-page="home"] .v9-home-process article,
+body[data-page="home"] .v8-process.v9-home-process article,
+body[data-page="home"] .v9-home-process article:nth-child(4),
+body[data-page="home"] .v8-process.v9-home-process article:nth-child(4){
+  min-height:260px !important;
+  height:100% !important;
+  padding:28px 28px 24px !important;
+  border-radius:28px !important;
+  border:1px solid rgba(212,163,115,.24) !important;
+  background:linear-gradient(180deg, rgba(22,52,109,.72), rgba(16,42,120,.62)) !important;
+  box-shadow:0 22px 52px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.06) !important;
+  color:rgba(255,249,239,.92) !important;
+}
+body[data-page="home"] .v9-home-process article:nth-child(4) *,
+body[data-page="home"] .v8-process.v9-home-process article:nth-child(4) *{
+  color:inherit !important;
+}
+body[data-page="home"] .v9-home-process article span,
+body[data-page="home"] .v8-process.v9-home-process article span{
+  color:#e5b878 !important;
+}
+body[data-page="home"] .v9-home-process article strong,
+body[data-page="home"] .v8-process.v9-home-process article strong{
+  font-size:clamp(30px,2.3vw,54px) !important;
+  line-height:.96 !important;
+}
+body[data-page="home"] .v9-home-process article p,
+body[data-page="home"] .v8-process.v9-home-process article p{
+  color:rgba(255,249,239,.70) !important;
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  body[data-page="reviews"] .reviews-list-grid{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="reviews"] .reviews-list-grid h3,
+  body[data-page="reviews"] .reviews-list-grid h3.v262-fit-title{
+    max-width:none !important;
+    margin-left:0 !important;
+  }
+  body[data-page="real-estate"] .v10-page-proof > .container{
+    width:min(76vw, 860px) !important;
+  }
+  body[data-page="home"] .v9-home-process,
+  body[data-page="home"] .v8-process.v9-home-process{
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:760px){
+  .v238-motion-stage{
+    min-height:560px !important;
+  }
+  .v261-gateway{inset:14px !important;}
+  body[data-page="reviews"] .reviews-vertical,
+  body[data-page="reviews"] .reviews-vertical--premium{
+    min-height:560px !important;
+    height:560px !important;
+  }
+  body[data-page="reviews"] .reviews-vertical .review-card{
+    inset:38px 24px 26px !important;
+    padding:28px 22px 22px !important;
+  }
+  body[data-page="real-estate"] .v10-page-proof > .container{
+    width:calc(100% - 28px) !important;
+  }
+  body[data-page="real-estate"] .v10-page-proof__grid{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="home"] .v9-home-process,
+  body[data-page="home"] .v8-process.v9-home-process{
+    grid-template-columns:1fr !important;
+  }
+}

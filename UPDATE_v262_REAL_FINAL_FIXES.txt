@@ -1,0 +1,18 @@
+v262 real final fixes
+
+This version uses both:
+1) assets/css/v262-real-final.css
+2) inline <style id="v262-critical-inline"> in every HTML head
+
+That means old CSS cannot override these fixes.
+
+Fixes:
+1. Review text/frame overflow fixed harder with taller card, larger grey frame, smaller safe text.
+2. Blurry/milky cards removed; transparent glass without heavy backdrop blur.
+3. “Международный контур” split into two lines and shifted left to fit without card enlargement.
+4. Blog hero blocks are transparent; title/buttons lifted upward.
+5. 3D animation replaced with stable premium lightweight version: no heavy blur/bloom/particles/SVG animateMotion.
+6. Loader restored and visible, with safety timeout against infinite loading.
+7. Real-estate stats table reduced to ~50% desktop width.
+8. Real-estate section title/link centered.
+9. Home “Результат” card forced to same size/color/frame as other cards.

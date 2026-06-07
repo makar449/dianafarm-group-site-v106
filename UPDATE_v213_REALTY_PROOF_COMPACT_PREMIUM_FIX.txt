@@ -1,0 +1,5 @@
+v213 fixes:
+- Real-estate stats panel made compact and premium again.
+- Removed the huge empty grid-like area from the real-estate proof block.
+- Stats now sit in small glass cards with clean spacing and no text overflow.
+- Cache bust updated to v=213.

@@ -1,0 +1,1 @@
+v109: fixed language dropdown alignment, compact footer spacing, centered social icons.

@@ -1,0 +1,10 @@
+v128 Contacts Social Scroll Cards Fix
+
+- Contacts page social links rebuilt as grouped TikTok / Instagram / Facebook accordions with full account names and arrows.
+- Footer no longer shows long TikTok / Instagram / Facebook social list.
+- Main social block keeps clean reference-style pills with full visible text.
+- Premium gold scrollbar restored for modal windows, forms, textareas and page scrollbars.
+- Removed WhatsApp buttons from object cards for cars / parking / real estate; WhatsApp stays in Contacts.
+- Process arrows centered between steps and enlarged.
+- About 4+ years in Dubai seal rebuilt so 4 and + are visible and do not overlap text.
+- Cache updated to v128.

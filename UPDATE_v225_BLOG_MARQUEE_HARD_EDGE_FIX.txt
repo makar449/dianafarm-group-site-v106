@@ -1,0 +1,1 @@
+v225: Blog marquee hard edge fix. Main double animation starts from the left viewport edge and stops before the right guide frame; small grey ticker remains hidden.

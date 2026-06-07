@@ -1,0 +1,13 @@
+v243 meteor lines quality
+
+- Reverted from the v242 full-page fixed/background approach to the previous v241 base.
+- Kept premium stack hero cards and route-line.
+- Rebuilt the line animation correctly:
+  * lines are section-contained, not fixed behind the whole site;
+  * they do not affect header position;
+  * they do not block filters, buttons, cards, links or text;
+  * they are thin meteor-like premium streaks, not wide beams;
+  * there are only a few lines per section, not too many;
+  * the animation is added across the full page by placing a subtle layer inside each section;
+  * on hover near a meteor line it lights up with warm golden color.
+- Applied only to the requested 10 service pages.

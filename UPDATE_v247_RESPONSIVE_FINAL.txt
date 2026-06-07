@@ -1,0 +1,1 @@
+v247: stronger responsive lock for desktop/tablet/phone, admin adaptation, modal heading contrast, restored optimized 3D scenes, removed content-visibility jump, fixed duplicate real-estate label.

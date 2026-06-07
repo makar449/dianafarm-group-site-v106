@@ -1,0 +1,2 @@
+v270: replaced services hero photo with the user-provided image.
+contacts hero left unchanged.

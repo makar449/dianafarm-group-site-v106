@@ -1,0 +1,5 @@
+v208 fixes:
+- Blog: removed moving topic line completely.
+- Blog: enlarged "Навигация по темам" showcase frame, increased padding, freed text layout, and made chips/cards roomier.
+- Home: refined trust cards with more premium spacing and icon offset from the frame.
+- Cache bust updated to v=208.

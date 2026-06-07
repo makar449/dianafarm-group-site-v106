@@ -1,0 +1,7 @@
+v269 forced photo layers
+
+Fix:
+- Added real <img> layers directly inside services.html and contacts.html hero sections.
+- This guarantees the images are visible and not hidden by old CSS background layers.
+- services.html uses assets/img/v269/services-hero-exact-visible.png.
+- contacts.html uses assets/img/v269/contacts-hero-success-visible.png.

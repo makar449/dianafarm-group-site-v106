@@ -1,0 +1,1 @@
+v157: partial redesign only for About and Services. Kept WhatsApp button style, kept moving keyword tape, changed services cards and detailed modal content with checkmarks.

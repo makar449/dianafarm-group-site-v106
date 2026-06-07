@@ -1,0 +1,15 @@
+v250 cinematic Global Gateway
+
+- Rebuilt Global Gateway animation as a more cinematic CSS/DOM scene, not a generated image.
+- Larger but controlled size similar to previous animation block.
+- Added deeper premium globe with atmosphere, meridians, moving surface and UAE/ASIA region labels.
+- Added sequential route drawing and animated light tracers on routes.
+- Rebuilt objects as more realistic premium object forms:
+  passport book with pages and gold cover,
+  metallic gold key,
+  dark bank card with chip/contactless/numbering,
+  ivory document with folded corner and stamp,
+  dimensional shipping container.
+- Added glass final panel and DIANAFARM GROUP brand lockup.
+- Improved timing into a 9.6 second cinematic loop: globe -> regions -> routes -> objects -> final panel -> brand.
+- Ran static QA: JS syntax, missing assets, CSS brace balance.

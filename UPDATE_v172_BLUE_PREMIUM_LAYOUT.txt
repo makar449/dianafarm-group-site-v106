@@ -1,0 +1,8 @@
+UPDATE v172 — blue premium layout lock
+- All service/detail page transitions and sections are locked to a deep blue premium background.
+- Service heroes now have protected two-column layout: long titles no longer hit right proof cards.
+- UAE / Asia / service pages use larger premium right-side proof panels to fill empty space.
+- Blog hero right side is filled with a premium editorial showcase instead of empty air.
+- Process blocks hide old arrow spans, keep text readable, and draw clean centered arrows only between cards.
+- "Наши услуги" section labels are centered.
+- Service/blog cards use dark premium panels, readable text, aligned bottom buttons and smoother appearance.

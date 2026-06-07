@@ -1,0 +1,8 @@
+v266 services hero photo implementation
+
+Implemented on the actual site:
+- Services page hero now uses the requested premium globe photo as a full-screen background.
+- Real HTML headings, buttons and right-side cards are placed over the image.
+- Added navy overlays for readability while keeping the image visible.
+- Styled right cards like the generated reference: glass cards, gold icons, vertical route line.
+- The image is stored at assets/img/v266/services-hero-global-bg.png.

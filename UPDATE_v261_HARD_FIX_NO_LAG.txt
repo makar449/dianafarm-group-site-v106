@@ -1,0 +1,15 @@
+v261 hard fix no lag
+
+Important: built from stable v260/v255 base. The laggy v259 animation is NOT used.
+Changes:
+- v238-quality.js rewritten completely to a lightweight Global Gateway animation.
+- v261-hard-fixes.css is loaded as the LAST stylesheet before </head>, so it overrides older CSS.
+- Fixes applied to the 8/9 layout issues:
+  review frame overflow,
+  no blurry cards,
+  International contour text fit,
+  transparent blog cards and title/buttons raised,
+  loader restored safely,
+  real estate stats width reduced,
+  real estate title/link centered,
+  Result card same size/frame/color.

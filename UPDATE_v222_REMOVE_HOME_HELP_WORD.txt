@@ -1,0 +1,1 @@
+v222: removed the word "Помощь" from the home process step 04 and from i18n runtime so it does not reappear after JS/language load.

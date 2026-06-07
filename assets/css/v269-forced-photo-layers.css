@@ -1,0 +1,190 @@
+
+/* v269 — hard fix: real <img> photo layers inside hero sections.
+   This cannot be hidden by older background-div CSS. */
+
+/* General forced photo hero layer */
+.v269-force-photo-hero{
+  position:relative !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  background:#05111f !important;
+}
+
+.v269-force-photo-hero > .v269-hero-photo-img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  transform:none !important;
+  filter:none !important;
+}
+
+/* Hide old bg layer on these two pages so it can't cover/replace the photo. */
+.v269-force-photo-hero > .v9-page-hero__bg{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+}
+
+/* Keep ALL real content above the photo. */
+.v269-force-photo-hero > .container,
+.v269-force-photo-hero .v9-page-hero__grid,
+.v269-force-photo-hero .v9-page-hero__copy,
+.v269-force-photo-hero aside{
+  position:relative !important;
+  z-index:5 !important;
+}
+
+/* Reset older pseudo overlays into readable overlays, never behind the section. */
+.v269-force-photo-hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+
+.v269-force-photo-hero::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  pointer-events:none !important;
+}
+
+/* -------- Services exact photo -------- */
+body[data-page="services"] .v269-services-force-photo{
+  min-height:clamp(760px, 52vw, 940px) !important;
+  padding:0 !important;
+  border-bottom:1px solid rgba(224,178,105,.22) !important;
+}
+
+body[data-page="services"] .v269-services-force-photo > .v269-hero-photo-img{
+  object-position:center center !important;
+}
+
+body[data-page="services"] .v269-services-force-photo::before{
+  background:
+    linear-gradient(90deg,
+      rgba(3,10,19,.76) 0%,
+      rgba(3,10,19,.58) 27%,
+      rgba(3,10,19,.22) 52%,
+      rgba(3,10,19,.36) 73%,
+      rgba(3,10,19,.62) 100%),
+    linear-gradient(180deg, rgba(3,10,19,.08), rgba(3,10,19,.05) 45%, rgba(3,10,19,.62) 100%) !important;
+}
+
+body[data-page="services"] .v269-services-force-photo::after{
+  background:
+    radial-gradient(circle at 18% 44%, rgba(0,0,0,.24), transparent 31%),
+    radial-gradient(circle at 57% 50%, rgba(244,188,99,.14), transparent 28%),
+    radial-gradient(circle at 88% 37%, rgba(244,188,99,.08), transparent 32%) !important;
+}
+
+body[data-page="services"] .v269-services-force-photo .container.v9-page-hero__grid{
+  width:min(1500px, calc(100% - 72px)) !important;
+  min-height:inherit !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) minmax(420px, 535px) !important;
+  gap:clamp(56px, 7vw, 112px) !important;
+  align-items:center !important;
+  padding-top:clamp(96px, 7vw, 135px) !important;
+  padding-bottom:clamp(72px, 6vw, 120px) !important;
+}
+
+/* -------- Contacts success deal photo -------- */
+body[data-page="contacts"] .v269-contacts-force-photo{
+  min-height:clamp(690px, 47vw, 840px) !important;
+  padding:0 !important;
+  border-bottom:1px solid rgba(224,178,105,.22) !important;
+}
+
+body[data-page="contacts"] .v269-contacts-force-photo > .v269-hero-photo-img{
+  object-position:center center !important;
+}
+
+body[data-page="contacts"] .v269-contacts-force-photo::before{
+  background:
+    linear-gradient(90deg,
+      rgba(3,10,19,.84) 0%,
+      rgba(3,10,19,.70) 31%,
+      rgba(3,10,19,.48) 55%,
+      rgba(3,10,19,.56) 76%,
+      rgba(3,10,19,.76) 100%),
+    linear-gradient(180deg, rgba(3,10,19,.16), rgba(3,10,19,.06) 42%, rgba(3,10,19,.70) 100%) !important;
+}
+
+body[data-page="contacts"] .v269-contacts-force-photo::after{
+  background:
+    radial-gradient(circle at 38% 45%, rgba(244,188,99,.11), transparent 27%),
+    radial-gradient(circle at 78% 45%, rgba(255,222,155,.08), transparent 29%),
+    radial-gradient(circle at 18% 50%, rgba(0,0,0,.30), transparent 30%) !important;
+}
+
+body[data-page="contacts"] .v269-contacts-force-photo .container.v9-page-hero__grid{
+  width:min(1500px, calc(100% - 72px)) !important;
+  min-height:inherit !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) minmax(420px, 540px) !important;
+  gap:clamp(56px, 7vw, 112px) !important;
+  align-items:center !important;
+  padding-top:clamp(92px, 7vw, 132px) !important;
+  padding-bottom:clamp(70px, 6vw, 110px) !important;
+}
+
+body[data-page="contacts"] .v269-contacts-force-photo .contact-hero-reviews{
+  background:linear-gradient(145deg, rgba(8,25,48,.52), rgba(5,16,31,.36)) !important;
+  border:1px solid rgba(255,248,236,.24) !important;
+  box-shadow:0 30px 80px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.10) !important;
+  backdrop-filter:blur(8px) !important;
+  -webkit-backdrop-filter:blur(8px) !important;
+}
+
+/* Make text readable on actual photos */
+.v269-force-photo-hero h1,
+.v269-force-photo-hero h2,
+.v269-force-photo-hero p,
+.v269-force-photo-hero .breadcrumbs,
+.v269-force-photo-hero .services-title-v199{
+  text-shadow:0 16px 44px rgba(0,0,0,.52) !important;
+}
+
+/* Route animation safety: keep it on vertical cards, but below text inside cards */
+.hero__trust-panel,
+.v9-trust-panel,
+.v103-hero-proof,
+.v238-direction-hero__panel{
+  position:relative !important;
+  isolation:isolate !important;
+}
+
+@media (max-width:1200px){
+  body[data-page="services"] .v269-services-force-photo .container.v9-page-hero__grid,
+  body[data-page="contacts"] .v269-contacts-force-photo .container.v9-page-hero__grid{
+    grid-template-columns:1fr !important;
+    width:min(980px, calc(100% - 48px)) !important;
+    gap:42px !important;
+  }
+}
+
+@media (max-width:760px){
+  body[data-page="services"] .v269-services-force-photo,
+  body[data-page="contacts"] .v269-contacts-force-photo{
+    min-height:auto !important;
+  }
+  body[data-page="services"] .v269-services-force-photo .container.v9-page-hero__grid,
+  body[data-page="contacts"] .v269-contacts-force-photo .container.v9-page-hero__grid{
+    width:calc(100% - 28px) !important;
+    padding-top:82px !important;
+    padding-bottom:64px !important;
+  }
+}

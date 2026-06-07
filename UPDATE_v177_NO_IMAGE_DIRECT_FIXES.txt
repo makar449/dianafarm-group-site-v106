@@ -1,0 +1,8 @@
+V177 direct code fixes, no image generation:
+- removed duplicate process arrows and fixed vertical/broken text in process cards;
+- made services hero word "Международные" non-breaking;
+- made "Наши услуги" label larger, centered and premium;
+- changed blog lower section label per request to "Все услуги" and made the section dark navy;
+- fixed blog card images so they fill the card and are not squeezed;
+- enlarged blog hero right frame and added a lightweight premium animated rail;
+- kept all changes CSS/HTML-only, no generated images.

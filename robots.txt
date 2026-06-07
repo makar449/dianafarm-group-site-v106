@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Sitemap: https://makar449.github.io/dianafarm-group-site-v106/sitemap.xml

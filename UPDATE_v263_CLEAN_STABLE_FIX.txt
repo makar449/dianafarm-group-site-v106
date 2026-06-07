@@ -1,0 +1,13 @@
+v263 clean stable fix
+
+Focused fixes for the screenshots:
+- Preloader/logo/line forced to exact screen center.
+- Review card frames simplified: one clean grey frame, no nested overlapping frames.
+- Review text cannot touch the frame.
+- Gold decorative lines hidden inside modal/detail/card headings so they cannot cross text.
+- 3D animation rewritten again: clean timing, objects fade out before the final panel appears, so nothing overlaps.
+- Blocks are transparent without heavy blur.
+- Blog heading/buttons moved upward.
+- Real-estate stats table remains 50% width on desktop.
+- Real-estate section title/link centered.
+- Home Result card same size/frame/color as siblings.

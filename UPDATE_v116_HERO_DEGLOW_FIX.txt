@@ -1,0 +1,1 @@
+v116: Main hero bottom white overexposure removed. Image extended through hero; bottom transition changed from white fade to dark premium navy gradient; cache updated to v=116.

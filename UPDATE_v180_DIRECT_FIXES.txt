@@ -1,0 +1,9 @@
+DIANAFARM GROUP v180 direct fixes
+
+Implemented from latest message, without generating any preview images:
+1. Blog topic/navigation block is now text-only; all photos removed from that frame and text is kept inside premium cards.
+2. Services hero keeps "Международные" as a whole word and includes a lightweight CSS 3D orbit effect.
+3. Asia page title is forced to exact lines: Бизнес / коммуникация / с Узбекистаном / и Азией, with a CSS 3D globe effect.
+4. Process blocks are rewritten with a final CSS lock so cards cannot collapse into vertical text; duplicate arrows/pseudo-connectors are removed.
+5. Nostrification hero is pulled upward, has a lightweight document 3D animation under the buttons, and larger 01/02/03 proof cards.
+6. Blog lower section is dark again; article images are protected from narrow distortion.

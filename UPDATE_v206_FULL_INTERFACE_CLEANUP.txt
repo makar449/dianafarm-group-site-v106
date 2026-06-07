@@ -1,0 +1,13 @@
+DIANAFARM GROUP — UPDATE v206 FULL INTERFACE CLEANUP
+
+Done:
+- Home services label made smaller, thinner and matte-gold.
+- Home services subtitle reduced to remove bulky look.
+- Home 01-05 process rebuilt with single centered gold arrows between cards.
+- Added premium sequential hover wave from card 01 to card 05; arrows glow in sequence.
+- All Services section label made compact and aligned with service card grid.
+- Main page hero titles lifted closer to the header and aligned to top.
+- Heavy canvas / 3D service animations removed from the required service pages.
+- Service-page text area made wider after removing animation overlays.
+- Header CTA protected from wrapping with nowrap, max-content min-width and clean padding.
+- Cache bumped to v206 for CSS, premium interface JS and i18n JS.

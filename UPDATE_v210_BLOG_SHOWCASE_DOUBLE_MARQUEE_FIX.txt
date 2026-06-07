@@ -1,0 +1,4 @@
+v210 fixes:
+- Blog: restored the double marquee with hover/pause effects and removed the single-line state.
+- Blog: enlarged the right showcase card, increased text size, and made the inner frame fill the outer card much more fully.
+- Cache bust updated to v=210.

@@ -1,0 +1,23 @@
+[
+  { "title": "Главная", "path": "index.html", "priority": "high" },
+  { "title": "Услуги", "path": "services.html", "priority": "high" },
+  { "title": "ВНЖ / ПМЖ Болгария", "path": "service-residence-bulgaria.html", "priority": "high" },
+  { "title": "Регистрация компаний", "path": "service-company-registration.html", "priority": "high" },
+  { "title": "Банки и счета", "path": "service-banks-accounts.html", "priority": "high" },
+  { "title": "Международная торговля", "path": "service-international-trade.html", "priority": "high" },
+  { "title": "Регистрация БАДов", "path": "service-supplements-registration.html", "priority": "high" },
+  { "title": "Регистрация косметики", "path": "service-cosmetics-registration.html", "priority": "high" },
+  { "title": "Фармацевтический консалтинг", "path": "service-pharma-consulting.html", "priority": "high" },
+  { "title": "Нострификация", "path": "service-nostrification.html", "priority": "medium" },
+  { "title": "Консалтинг под ключ", "path": "service-turnkey-consulting.html", "priority": "medium" },
+  { "title": "Недвижимость", "path": "real-estate.html", "priority": "medium" },
+  { "title": "Авто", "path": "cars.html", "priority": "medium" },
+  { "title": "Паркинги", "path": "parking.html", "priority": "medium" },
+  { "title": "Узбекистан / Азия", "path": "asia.html", "priority": "high" },
+  { "title": "UAE / Dubai", "path": "uae.html", "priority": "high" },
+  { "title": "О компании", "path": "about.html", "priority": "high" },
+  { "title": "Блог", "path": "blog.html", "priority": "high" },
+  { "title": "Контакты", "path": "contacts.html", "priority": "high" },
+  { "title": "B2B", "path": "b2b.html", "priority": "medium" },
+  { "title": "Отзывы", "path": "reviews.html", "priority": "high" }
+]

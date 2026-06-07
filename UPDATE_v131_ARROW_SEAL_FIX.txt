@@ -1,0 +1,1 @@
+v131: code-only fix. Replaced process arrows with centered premium chevron connectors, removed extra white circle around the 4+ plus, centered accordion arrows. No image generation.

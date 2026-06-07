@@ -1,0 +1,5 @@
+/* v272 — contacts hero photo replacement */
+body[data-page="contacts"] .v269-contacts-force-photo > .v269-hero-photo-img{
+  object-position:center center !important;
+  filter:none !important;
+}

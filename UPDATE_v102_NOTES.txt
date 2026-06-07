@@ -1,0 +1,15 @@
+DIANAFARM GROUP — Premium update v102
+
+Main changes completed:
+1. Consultation form refreshed with softer premium styling, rounded fields, improved focus states, reduced visual rectangular outlines.
+2. "Оставить заявку" button on service side cards moved lower with more air under the text.
+3. Service cards for ключевые направления rewritten with larger, clearer, more premium excerpts.
+4. B2B offers expanded and refreshed so categories have richer image coverage and more relevant premium visuals.
+5. Car rental visuals replaced with more premium image set and refreshed car descriptions.
+6. Parking and sea real estate sections refreshed with unique visuals and improved descriptions.
+7. Blog cards restyled to remove cramped feeling / text collision; layout improved.
+8. Blog detail content substantially expanded; service detail pages also rewritten in more detailed form.
+9. Service cards made fully clickable; broken routing for turnkey / international services fixed with dedicated detail pages.
+10. New pages added: service-turnkey-consulting.html and service-international-trade.html.
+
+Archive: dianafarm_group_luxury_exact_v102_premium_update.zip

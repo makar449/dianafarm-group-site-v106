@@ -1,0 +1,5 @@
+v152 TЗ polish
+- WhatsApp country text transition made very smooth and kept synchronized
+- service cards: reduced lower white/content plaque and gave more visual priority to photos
+- footer/contact trythis text changed from apteka to TryThis
+- About hero title restored as full “О DIANAFARM GROUP” and fitted safely inside viewport

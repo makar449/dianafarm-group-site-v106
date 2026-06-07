@@ -1,0 +1,13 @@
+DIANAFARM GROUP v169 final TZ interface polish
+
+Changes:
+- Added standalone Reviews page and header menu link.
+- Moved compact animated reviews block into the empty right side of the consultation hero.
+- Removed duplicate static WhatsApp item from socials; left main rotating WhatsApp button intact.
+- Returned contacts socials as an accordion, open by default, with smooth collapse/expand.
+- Fixed footer contact rows: icons and text align on one line, no overlaps.
+- Refined service cards: photos, bottom-aligned details buttons and softer premium button style.
+- Reworked process block: removed numbered circular balls, added clean centered chevrons only between steps.
+- Cleaned request/contact block corner geometry and duplicate decorative layers.
+- Added stronger anti-overlap CSS for service hero titles and right proof cards.
+- Kept WhatsApp country rotator animation and 2-second sync behavior.

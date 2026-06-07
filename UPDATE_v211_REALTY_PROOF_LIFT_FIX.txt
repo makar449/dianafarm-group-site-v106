@@ -1,0 +1,5 @@
+v211 fixes:
+- Real estate: rebuilt the 10+/500+/1200+/100%/6-9% proof panel so it fills the width instead of leaving an empty right side.
+- Real estate: proof panel text is protected from overlapping and uses responsive columns.
+- Global: lifted all page heroes and main sections upward to remove excessive empty top space.
+- Cache bust updated to v=211 on all HTML pages.

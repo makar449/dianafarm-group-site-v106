@@ -1,0 +1,6 @@
+v165 MOBILE STABILITY LOCK
+- Mobile-first override for all pages.
+- Forces vertical scrolling, removes stuck loader on phone, disables heavy transforms/effects.
+- Rebuilds mobile header/menu to be tappable and scrollable.
+- Forces service/details/catalog/contact/admin layouts to single-column on phone.
+- Prevents headings/cards/forms/modals from overlapping or causing horizontal scroll.

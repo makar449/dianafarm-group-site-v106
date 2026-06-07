@@ -1,0 +1,1 @@
+v220: hard fixes for aligned service/catalog buttons, removal of “Реализация”, “Обслуживание” -> “Помощь”, blog main double marquee extended + grey ticker hidden, arrows forced on home/services/process blocks.

@@ -1,0 +1,13 @@
+v252 full language coverage
+
+What was added:
+- Added assets/js/v252-full-site-i18n.js.
+- It supplements existing data-i18n and v106-i18n translations.
+- It scans static text nodes, dynamically rendered text, modal text and admin-panel text.
+- It translates text and attributes: placeholder, aria-label, title, alt, value, content.
+- It uses existing DFG_DEFAULT_DATA localized content first.
+- It adds exact translations for main static site phrases.
+- It has fallback dictionaries for BG / EN / KA so remaining Russian words are also converted instead of staying Russian.
+- It observes DOM mutations, so content rendered after language switch is translated too.
+- It runs after language button clicks and storage changes.
+- Cache query params bumped to v252.

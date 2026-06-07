@@ -1,0 +1,10 @@
+v127 Rebuild Visual Alignment Fix
+
+- Rebuilt final visual alignment layer from v126.
+- Centered process arrows between steps and enlarged step numbers.
+- Added right-side premium panel to About hero to remove empty-screen feeling.
+- Reworked 4+ YEARS IN DUBAI seal: visible number, centered plus, stronger warm contrast.
+- Fixed car/object card buttons to prevent overflow and cropped labels.
+- Normalized social pills: fixed badge letters, equal heights, centered icons.
+- Premium separators and footer links vertical alignment.
+- Bumped cache to v=127.

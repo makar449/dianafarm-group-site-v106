@@ -1,0 +1,8 @@
+v148 visual QA fixes
+- removed stray gold dash before Agile Business footer credit
+- forced service card images to fill top media area cleanly
+- removed thin gold continuation after process arrows
+- enlarged D inside circular brand seal
+- separated blog hero title lines for proper spacing
+- removed leading O from About hero title and expanded description
+- added extra breathing room rules for brand/logo image containers

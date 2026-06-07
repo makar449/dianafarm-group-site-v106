@@ -1,0 +1,598 @@
+/* v264 deep quality fixes
+   Focus: clean non-blurry cards, aligned reviews, lifted hero copy,
+   premium filter, contact visual, stable card motion.
+*/
+
+:root{
+  --v264-card-bg: linear-gradient(180deg, rgba(11,31,54,.94), rgba(5,16,31,.98));
+  --v264-card-bg-soft: linear-gradient(180deg, rgba(11,31,54,.76), rgba(5,16,31,.88));
+  --v264-line: rgba(214,173,111,.22);
+  --v264-line-strong: rgba(214,173,111,.34);
+  --v264-white-line: rgba(233,239,247,.16);
+  --v264-shadow: 0 22px 60px rgba(0,0,0,.28);
+}
+
+/* ---------- 1) Kill unwanted blur / smoothing on the complained sections ---------- */
+body.v9-body:not([data-page="home"]) .hero-feature,
+body.v9-body:not([data-page="home"]) .v103-hero-proof article,
+body.v9-body:not([data-page="home"]) .v122-rich-cards article,
+body.v9-body:not([data-page="home"]) .v10-process article,
+body.v9-body:not([data-page="home"]) .v103-value-grid article,
+body.v9-body:not([data-page="home"]) .v124-service-mini-card,
+body.v9-body:not([data-page="home"]) .v122-rich-route,
+body.v9-body:not([data-page="home"]) .v10-side-card,
+body.v9-body:not([data-page="home"]) .forms-card,
+body.v9-body:not([data-page="home"]) .contact-column,
+body.v9-body:not([data-page="home"]) .contact-hero-reviews,
+body.v9-body:not([data-page="home"]) .catalog-toolbar,
+body.v9-body:not([data-page="home"]) .v9-catalog-toolbar,
+body.v9-body:not([data-page="home"]) .premium-filter__button,
+body.v9-body:not([data-page="home"]) .premium-filter__menu,
+body.v9-body:not([data-page="home"]) .v10-page-proof__grid,
+body.v9-body:not([data-page="home"]) .v10-page-proof__item,
+body.v9-body:not([data-page="home"]) .review-card,
+body.v9-body:not([data-page="home"]) .reviews-list-grid article,
+body.v9-body:not([data-page="home"]) .v9-wide-contact,
+body.v9-body:not([data-page="home"]) .social-section{
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+body.v9-body:not([data-page="home"]) .reveal,
+body.v9-body:not([data-page="home"]) .reveal.in-view,
+body.v9-body:not([data-page="home"]) .reveal-group > *,
+body.v9-body:not([data-page="home"]) .reveal-group.in-view > *{
+  filter: none !important;
+}
+
+/* ---------- 2) Contacts page: add premium visual and clean layout ---------- */
+body[data-page="contacts"] .section--v9-contacts .contacts-grid{
+  display:grid !important;
+  grid-template-columns: minmax(0,1.05fr) minmax(320px,.72fr) minmax(320px,.92fr) !important;
+  gap:26px !important;
+  align-items:stretch !important;
+}
+body[data-page="contacts"] .forms-card,
+body[data-page="contacts"] .contact-column,
+body[data-page="contacts"] .contact-visual-card{
+  min-height:100% !important;
+  border-radius:30px !important;
+  border:1px solid var(--v264-white-line) !important;
+  background: var(--v264-card-bg) !important;
+  box-shadow: var(--v264-shadow) !important;
+  overflow:hidden !important;
+}
+body[data-page="contacts"] .contact-visual-card{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  min-height:640px;
+  isolation:isolate;
+}
+body[data-page="contacts"] .contact-visual-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(7,16,29,.08), rgba(5,12,22,.28) 36%, rgba(4,9,18,.82) 100%),
+    url('../img/v264/contacts-premium-scene.png') center/cover no-repeat;
+  z-index:-2;
+}
+body[data-page="contacts"] .contact-visual-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(214,173,111,.05), transparent 14%, transparent 70%, rgba(214,173,111,.07));
+  z-index:-1;
+}
+body[data-page="contacts"] .contact-visual-card__content{
+  width:100%;
+  padding:26px;
+  background:linear-gradient(180deg, rgba(5,14,25,.02), rgba(5,12,22,.72) 38%, rgba(5,12,22,.93));
+}
+body[data-page="contacts"] .contact-visual-card__eyebrow{
+  display:inline-flex;
+  margin-bottom:12px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(214,173,111,.28);
+  background:rgba(255,255,255,.04);
+  color:#f1d091;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+body[data-page="contacts"] .contact-visual-card h3{
+  margin:0 0 10px;
+  color:#fff6e8;
+  font-size:clamp(28px,2.3vw,40px);
+  line-height:1;
+}
+body[data-page="contacts"] .contact-visual-card p{
+  margin:0;
+  color:rgba(255,248,236,.76);
+  line-height:1.55;
+}
+body[data-page="contacts"] .contact-visual-card__stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:18px;
+}
+body[data-page="contacts"] .contact-visual-card__stats article{
+  padding:14px 12px;
+  border-radius:18px;
+  border:1px solid rgba(214,173,111,.18);
+  background:rgba(255,255,255,.045);
+}
+body[data-page="contacts"] .contact-visual-card__stats strong{
+  display:block;
+  color:#f4cf8f;
+  font-size:18px;
+  margin-bottom:4px;
+}
+body[data-page="contacts"] .contact-visual-card__stats span{
+  color:rgba(255,248,236,.68);
+  font-size:12px;
+  line-height:1.35;
+}
+
+/* ---------- 3) Reviews list cards: clean frame + no gold line on words ---------- */
+body[data-page="reviews"] .reviews-list-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+body[data-page="reviews"] .reviews-list-grid article{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  min-height:350px !important;
+  padding:30px 28px 24px !important;
+  border-radius:30px !important;
+  overflow:hidden !important;
+  background: var(--v264-card-bg) !important;
+  border:1px solid var(--v264-white-line) !important;
+  box-shadow: var(--v264-shadow) !important;
+}
+body[data-page="reviews"] .reviews-list-grid article::before,
+body[data-page="reviews"] .reviews-list-grid article::after,
+body[data-page="reviews"] .reviews-list-grid h3::before,
+body[data-page="reviews"] .reviews-list-grid h3::after,
+body[data-page="reviews"] .reviews-list-grid h3 span::before,
+body[data-page="reviews"] .reviews-list-grid h3 span::after{
+  content:none !important;
+  display:none !important;
+}
+body[data-page="reviews"] .reviews-list-grid > article > span{
+  width:56px !important;
+  height:56px !important;
+  margin:0 0 16px !important;
+  border-radius:50% !important;
+  border:1px solid rgba(214,173,111,.24) !important;
+  background:rgba(255,255,255,.045) !important;
+  color:#f0cd8b !important;
+  font-size:18px !important;
+  font-weight:900 !important;
+  line-height:56px !important;
+  text-align:center !important;
+  box-shadow:none !important;
+}
+body[data-page="reviews"] .reviews-list-grid h3,
+body[data-page="reviews"] .reviews-list-grid h3.v262-fit-title{
+  margin:0 0 18px !important;
+  color:#fff5e8 !important;
+  font-size:clamp(24px,2.2vw,34px) !important;
+  line-height:.94 !important;
+  letter-spacing:-.04em !important;
+  white-space:normal !important;
+  position:relative !important;
+  left:0 !important;
+  max-width:100% !important;
+}
+body[data-page="reviews"] .reviews-list-grid h3.v262-fit-title span{
+  display:block !important;
+  white-space:normal !important;
+  background:none !important;
+}
+body[data-page="reviews"] .reviews-list-grid article:nth-child(3) h3.v262-fit-title{
+  margin-right:22px !important;
+}
+body[data-page="reviews"] .reviews-list-grid p{
+  margin:0 0 auto !important;
+  color:rgba(255,248,236,.78) !important;
+  font-size:18px !important;
+  line-height:1.58 !important;
+}
+body[data-page="reviews"] .reviews-list-grid small{
+  display:block !important;
+  margin-top:18px !important;
+  padding-top:16px !important;
+  border-top:1px solid rgba(214,173,111,.18) !important;
+  color:#f0cd8b !important;
+  font-size:12px !important;
+  letter-spacing:.17em !important;
+  text-transform:uppercase !important;
+}
+
+/* ---------- 4) Review slider/frame: align borders, avoid overlap, fit text ---------- */
+body[data-page="reviews"] .reviews-vertical,
+body[data-page="reviews"] .reviews-vertical--premium{
+  position:relative !important;
+  border-radius:38px !important;
+  overflow:hidden !important;
+  background:linear-gradient(180deg, rgba(12,31,53,.90), rgba(5,16,31,.98)) !important;
+  border:1px solid rgba(219,226,236,.16) !important;
+  box-shadow:var(--v264-shadow) !important;
+}
+body[data-page="reviews"] .reviews-vertical::before{
+  inset:18px !important;
+  border-radius:30px !important;
+  border:1px solid rgba(219,226,236,.18) !important;
+}
+body[data-page="reviews"] .reviews-vertical .review-card{
+  inset:44px 40px 36px !important;
+  padding:34px 28px 26px !important;
+  border-radius:26px !important;
+}
+body[data-page="reviews"] .review-card__top{
+  margin-bottom:20px !important;
+}
+body[data-page="reviews"] .review-card__badge{
+  max-width:70% !important;
+  padding:8px 14px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(219,226,236,.18) !important;
+  background:rgba(255,255,255,.04) !important;
+  color:#dfe6ef !important;
+  font-size:12px !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+body[data-page="reviews"] .review-card__rating{
+  color:#f0cd8b !important;
+  font-size:14px !important;
+  letter-spacing:.18em !important;
+}
+body[data-page="reviews"] .review-card p{
+  flex:1 1 auto !important;
+  max-height:none !important;
+  margin:0 !important;
+  font-size:clamp(18px,1.5vw,23px) !important;
+  line-height:1.52 !important;
+  overflow:hidden !important;
+}
+body[data-page="reviews"] .review-card__footer{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:18px !important;
+}
+body[data-page="reviews"] .review-card__footer strong,
+body[data-page="reviews"] .review-card__footer span{
+  white-space:nowrap;
+}
+
+/* ---------- 5) Service hero right cards: straighten, fit text, no overlap ---------- */
+body[data-page^="service-"] .v9-page-hero,
+body[data-page="blog"] .v9-page-hero{
+  padding-top:70px !important;
+  padding-bottom:60px !important;
+}
+body[data-page^="service-"] .v9-page-hero__grid,
+body[data-page="blog"] .v9-page-hero__grid{
+  align-items:start !important;
+}
+body[data-page^="service-"] .v9-page-hero__copy,
+body[data-page="blog"] .v9-page-hero__copy{
+  padding-top:10px !important;
+  margin-top:-34px !important;
+}
+body[data-page^="service-"] .v9-page-hero__copy .breadcrumbs,
+body[data-page="blog"] .v9-page-hero__copy .breadcrumbs{
+  margin-bottom:18px !important;
+}
+body[data-page^="service-"] .v9-page-hero__copy p,
+body[data-page="blog"] .v9-page-hero__copy p{
+  margin-top:16px !important;
+  max-width:760px !important;
+}
+body[data-page^="service-"] .hero__actions,
+body[data-page="blog"] .hero__actions{
+  margin-top:22px !important;
+}
+body[data-page^="service-"] .v103-hero-proof,
+body[data-page="blog"] .v103-hero-proof,
+body[data-page="blog"] .v238-direction-hero__panel{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:18px !important;
+  align-content:start !important;
+  margin-top:-10px !important;
+}
+body[data-page^="service-"] .v103-hero-proof article,
+body[data-page="blog"] .hero-feature,
+body[data-page="blog"] .v238-direction-hero__panel .hero-feature{
+  display:grid !important;
+  grid-template-columns:66px minmax(0,1fr) !important;
+  gap:18px !important;
+  align-items:center !important;
+  min-height:112px !important;
+  padding:20px 24px !important;
+  border-radius:26px !important;
+  overflow:hidden !important;
+  background: var(--v264-card-bg-soft) !important;
+  border:1px solid var(--v264-white-line) !important;
+  box-shadow:0 18px 44px rgba(0,0,0,.18) !important;
+}
+body[data-page^="service-"] .v103-hero-proof article > span,
+body[data-page="blog"] .hero-feature__icon,
+body[data-page="blog"] .hero-feature > span{
+  width:54px !important;
+  height:54px !important;
+  border-radius:50% !important;
+  display:grid !important;
+  place-items:center !important;
+  margin:0 !important;
+  border:1px solid rgba(214,173,111,.30) !important;
+  color:#f0cd8b !important;
+  background:rgba(255,255,255,.04) !important;
+}
+body[data-page^="service-"] .v103-hero-proof article strong,
+body[data-page="blog"] .hero-feature h3{
+  display:block !important;
+  margin:0 0 6px !important;
+  font-size:clamp(19px,1.7vw,28px) !important;
+  line-height:1.05 !important;
+  color:#fff5e8 !important;
+}
+body[data-page^="service-"] .v103-hero-proof article small,
+body[data-page="blog"] .hero-feature p{
+  display:block !important;
+  margin:0 !important;
+  color:rgba(255,248,236,.72) !important;
+  font-size:14px !important;
+  line-height:1.45 !important;
+}
+
+/* ---------- 6) Generic premium card motion for screenshots 6/7/8/9 ---------- */
+@keyframes v264CardIn{
+  from{opacity:0;transform:translateY(22px) scale(.985);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+body[data-page^="service-"] .v10-process article,
+body[data-page^="service-"] .v122-rich-cards article,
+body[data-page^="service-"] .v103-value-grid article,
+body[data-page="blog"] .v10-process article,
+body[data-page="real-estate"] .v10-process article,
+body[data-page="reviews"] .reviews-list-grid article{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:154px !important;
+  padding:24px 28px 24px 28px !important;
+  border-radius:28px !important;
+  background: var(--v264-card-bg-soft) !important;
+  border:1px solid var(--v264-white-line) !important;
+  box-shadow:0 16px 34px rgba(0,0,0,.12) !important;
+  transition:transform .42s cubic-bezier(.22,1,.36,1), box-shadow .42s cubic-bezier(.22,1,.36,1), border-color .42s ease !important;
+  animation:v264CardIn .75s cubic-bezier(.22,1,.36,1) both;
+}
+body[data-page^="service-"] .v10-process article:nth-child(2),
+body[data-page^="service-"] .v122-rich-cards article:nth-child(2),
+body[data-page^="service-"] .v103-value-grid article:nth-child(2),
+body[data-page="blog"] .v10-process article:nth-child(2),
+body[data-page="real-estate"] .v10-process article:nth-child(2){ animation-delay:.08s; }
+body[data-page^="service-"] .v10-process article:nth-child(3),
+body[data-page^="service-"] .v122-rich-cards article:nth-child(3),
+body[data-page^="service-"] .v103-value-grid article:nth-child(3),
+body[data-page="blog"] .v10-process article:nth-child(3),
+body[data-page="real-estate"] .v10-process article:nth-child(3){ animation-delay:.16s; }
+body[data-page^="service-"] .v10-process article:nth-child(4),
+body[data-page^="service-"] .v122-rich-cards article:nth-child(4),
+body[data-page^="service-"] .v103-value-grid article:nth-child(4),
+body[data-page="blog"] .v10-process article:nth-child(4),
+body[data-page="real-estate"] .v10-process article:nth-child(4){ animation-delay:.24s; }
+body[data-page^="service-"] .v10-process article:hover,
+body[data-page^="service-"] .v122-rich-cards article:hover,
+body[data-page^="service-"] .v103-value-grid article:hover,
+body[data-page="blog"] .v10-process article:hover,
+body[data-page="real-estate"] .v10-process article:hover,
+body[data-page="reviews"] .reviews-list-grid article:hover{
+  transform:translateY(-8px) !important;
+  border-color:var(--v264-line-strong) !important;
+  box-shadow:0 28px 60px rgba(0,0,0,.22) !important;
+}
+body[data-page^="service-"] .v10-process article span:first-child,
+body[data-page^="service-"] .v122-rich-cards article span:first-child,
+body[data-page^="service-"] .v103-value-grid article span:first-child,
+body[data-page="blog"] .v10-process article span:first-child,
+body[data-page="real-estate"] .v10-process article span:first-child{
+  display:inline-flex !important;
+  width:56px !important;
+  height:56px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 0 14px !important;
+  border-radius:50% !important;
+  border:1px solid rgba(214,173,111,.24) !important;
+  background:rgba(255,255,255,.04) !important;
+  color:#f0cd8b !important;
+  font-size:18px !important;
+  font-weight:900 !important;
+}
+body[data-page^="service-"] .v10-process article h3,
+body[data-page^="service-"] .v122-rich-cards article h3,
+body[data-page^="service-"] .v103-value-grid article h3,
+body[data-page="blog"] .v10-process article h3,
+body[data-page="real-estate"] .v10-process article h3{
+  margin:0 0 10px !important;
+  color:#fff5e8 !important;
+  font-size:clamp(24px,2vw,42px) !important;
+  line-height:1 !important;
+}
+body[data-page^="service-"] .v10-process article p,
+body[data-page^="service-"] .v122-rich-cards article p,
+body[data-page^="service-"] .v103-value-grid article p,
+body[data-page="blog"] .v10-process article p,
+body[data-page="real-estate"] .v10-process article p{
+  margin:0 !important;
+  color:rgba(255,248,236,.76) !important;
+  font-size:15px !important;
+  line-height:1.55 !important;
+}
+
+/* ---------- 7) Blog hero lift ---------- */
+body[data-page="blog"] .v9-page-hero{
+  min-height:640px !important;
+}
+body[data-page="blog"] .v9-page-hero__copy h1{
+  margin-top:10px !important;
+}
+body[data-page="blog"] .v238-direction-hero__panel{
+  padding-top:10px !important;
+}
+
+/* ---------- 8) Filter: more premium shell and adult arrows ---------- */
+body[data-page="real-estate"] .v9-filter-bar,
+body[data-page="b2b"] .v9-filter-bar{
+  margin-top:-18px !important;
+}
+body[data-page="real-estate"] .v9-catalog-toolbar,
+body[data-page="b2b"] .v9-catalog-toolbar,
+body[data-page="real-estate"] .catalog-toolbar.v9-catalog-toolbar,
+body[data-page="b2b"] .catalog-toolbar.v9-catalog-toolbar{
+  padding:16px !important;
+  gap:14px !important;
+  border-radius:34px !important;
+  background:linear-gradient(180deg, rgba(17,34,57,.96), rgba(5,16,31,.98)) !important;
+  border:1px solid rgba(214,173,111,.22) !important;
+  box-shadow:0 26px 60px rgba(0,0,0,.22) !important;
+}
+body[data-page="real-estate"] .premium-filter,
+body[data-page="b2b"] .premium-filter{
+  min-width:0 !important;
+}
+body[data-page="real-estate"] .premium-filter__button,
+body[data-page="b2b"] .premium-filter__button{
+  position:relative !important;
+  min-height:78px !important;
+  padding:16px 62px 16px 20px !important;
+  border-radius:22px !important;
+  background:linear-gradient(180deg, rgba(32,58,87,.88), rgba(12,31,53,.98)) !important;
+  border:1px solid rgba(214,173,111,.18) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+body[data-page="real-estate"] .premium-filter__label,
+body[data-page="b2b"] .premium-filter__label{
+  color:#f0cd8b !important;
+  font-size:11px !important;
+  font-weight:800 !important;
+  letter-spacing:.16em !important;
+  text-transform:uppercase !important;
+}
+body[data-page="real-estate"] .premium-filter__button strong,
+body[data-page="b2b"] .premium-filter__button strong{
+  display:block !important;
+  margin-top:8px !important;
+  color:#fff7ea !important;
+  font-size:18px !important;
+  line-height:1.15 !important;
+}
+body[data-page="real-estate"] .premium-filter__button i,
+body[data-page="b2b"] .premium-filter__button i{
+  position:absolute !important;
+  right:18px !important;
+  top:50% !important;
+  width:40px !important;
+  height:40px !important;
+  margin:0 !important;
+  transform:translateY(-50%) !important;
+  border-radius:50% !important;
+  display:grid !important;
+  place-items:center !important;
+  color:transparent !important;
+  background:linear-gradient(135deg, #f4cf8f, #d89b49) !important;
+  box-shadow:0 10px 22px rgba(216,155,73,.22) !important;
+}
+body[data-page="real-estate"] .premium-filter__button i::before,
+body[data-page="b2b"] .premium-filter__button i::before{
+  content:"";
+  width:10px;
+  height:10px;
+  border-right:2px solid #09111e;
+  border-bottom:2px solid #09111e;
+  transform:rotate(45deg) translateY(-1px);
+}
+body[data-page="real-estate"] .premium-filter.is-open .premium-filter__button i,
+body[data-page="b2b"] .premium-filter.is-open .premium-filter__button i{
+  transform:translateY(-50%) rotate(180deg) !important;
+}
+body[data-page="real-estate"] .premium-filter__menu,
+body[data-page="b2b"] .premium-filter__menu{
+  margin-top:10px !important;
+  padding:10px !important;
+  border-radius:20px !important;
+  background:linear-gradient(180deg, rgba(13,30,50,.98), rgba(4,14,26,.98)) !important;
+  border:1px solid rgba(214,173,111,.18) !important;
+  box-shadow:0 20px 44px rgba(0,0,0,.24) !important;
+}
+body[data-page="real-estate"] .premium-filter__option,
+body[data-page="b2b"] .premium-filter__option{
+  min-height:44px !important;
+  border-radius:14px !important;
+  color:#fff7ea !important;
+}
+body[data-page="real-estate"] .premium-filter__option:hover,
+body[data-page="real-estate"] .premium-filter__option.active,
+body[data-page="b2b"] .premium-filter__option:hover,
+body[data-page="b2b"] .premium-filter__option.active{
+  background:rgba(214,173,111,.10) !important;
+  color:#f1d091 !important;
+}
+body[data-page="real-estate"] .v9-catalog-toolbar > input[type="search"],
+body[data-page="b2b"] .v9-catalog-toolbar > input[type="search"]{
+  min-height:78px !important;
+  padding:0 22px !important;
+  border-radius:22px !important;
+  background:linear-gradient(180deg, rgba(12,31,53,.98), rgba(6,19,34,.98)) !important;
+  border:1px solid rgba(214,173,111,.18) !important;
+  color:#fff7ea !important;
+  box-shadow:none !important;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1200px){
+  body[data-page="contacts"] .section--v9-contacts .contacts-grid{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="contacts"] .contact-visual-card{
+    min-height:520px;
+  }
+  body[data-page="reviews"] .reviews-list-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+@media (max-width: 760px){
+  body[data-page="contacts"] .contact-visual-card__stats{
+    grid-template-columns:1fr;
+  }
+  body[data-page="reviews"] .reviews-vertical .review-card{
+    inset:36px 24px 24px !important;
+    padding:28px 20px 22px !important;
+  }
+  body[data-page="reviews"] .review-card p{
+    font-size:16px !important;
+    line-height:1.46 !important;
+  }
+  body[data-page^="service-"] .v103-hero-proof article,
+  body[data-page="blog"] .hero-feature,
+  body[data-page="blog"] .v238-direction-hero__panel .hero-feature{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+}

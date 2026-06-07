@@ -1,0 +1,15 @@
+DIANAFARM GROUP — v105 Full Multilingual Fix
+
+Focus:
+- RU / BG / KA / EN language switching made more complete across the user-facing website.
+- Added a dedicated v105 multilingual layer for static internal service pages.
+- Added Bulgarian, Georgian and English rich article content for Blog detail modals.
+- Improved form text, placeholders, trust chips and WhatsApp messages for RU / BG / KA / EN.
+- Kept existing layout, pages, admin panel and forms without removing functionality.
+
+Technical checks:
+- app.js syntax: OK
+- data.js parse: OK
+- v105-i18n.js syntax: OK
+- local file references: 0 missing
+- data image references: 0 missing

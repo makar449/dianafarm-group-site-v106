@@ -1,0 +1,7 @@
+v268 real photo backgrounds
+
+Fixed:
+- Services hero photo was present but hidden behind the section background. It is now placed on a visible z-index layer.
+- Contacts hero now has a premium consultation/success-deal photo background.
+- Both pages keep real HTML text/buttons/cards on top of the photo.
+- The previously added vertical route animation remains active for vertical card stacks.

@@ -1,0 +1,8 @@
+v154 quality cleanup
+- WhatsApp removed from service listing cards; remains in detail/modal only
+- about hero title forced to DIANAFARM GROUP with no leading O
+- Private Ecosystem panel pulled upward
+- D logo uses real centered text, pseudo-D disabled
+- blog hero title spacing fixed
+- services hero text/frame spacing tightened
+- WhatsApp country animation made very smooth and synced

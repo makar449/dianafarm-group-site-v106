@@ -1,0 +1,7 @@
+v149 targeted visual refinements
+- blog real estate card text aligned cleaner on mobile
+- WhatsApp button added next to Details in real estate blog card
+- process arrows reduced to centered gold arrowheads only
+- contacts trythis.ae label now reads trythis.ae — аптека
+- social block in contacts now collapsed by default
+- WhatsApp rotator buttons cleaned: no dash, no extra shapes, smoother animation

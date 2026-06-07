@@ -1,0 +1,18 @@
+DIANAFARM GROUP — v106 Final Multilingual + UI Polish
+
+Main changes:
+1. Added v106-i18n.js to all top-level HTML pages. The previous v105 multilingual layer existed but was not loaded by pages; v106 is now connected after app.js.
+2. Improved multilingual coverage for static sections: home process/CTA, contacts intro, social block, real estate headings, footer headings and service detail pages.
+3. Reworked premium filters as custom dropdown widgets, avoiding the default blue browser select menu.
+4. Improved filter panel placement and styling before catalog cards.
+5. Added additional premium CSS for the consultation modal: softer glass surface, cleaner inputs, better spacing, improved trust chips and responsive behavior.
+6. Improved language dropdown behavior for RU / BG / KA / EN with a premium active-state pill and click-open behavior.
+7. Updated storage keys to avoid older browser-local data overriding the new version.
+
+Checks performed:
+- node --check assets/js/app.js
+- node --check assets/js/data.js
+- node --check assets/js/admin.js
+- node --check assets/js/v106-i18n.js
+- local HTML href/src checks
+- data image/path checks

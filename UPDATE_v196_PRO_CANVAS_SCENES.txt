@@ -1,0 +1,1 @@
+v196: added forced-visible external-JS canvas scenes to nostrification, pharma, cosmetics, supplements, banks, company registration, residence Bulgaria. Trade v195 remains unchanged.

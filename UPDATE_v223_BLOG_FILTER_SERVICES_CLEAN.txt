@@ -1,0 +1,1 @@
+v223: Blog marquee stretched to the right guide frame without overlap; extra grey lower blog animation hidden; services page hero animations removed; services filters rebuilt as compact left-side panel.

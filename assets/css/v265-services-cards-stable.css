@@ -1,0 +1,191 @@
+
+/* v265 — services cards stable height/loading fix
+   Fixes the issue where cards on "Все услуги" look stretched during/after loading.
+*/
+
+body[data-page="services"] .section--v9-services > .container{
+  align-items:start !important;
+}
+
+body[data-page="services"] #servicesGrid,
+body[data-page="services"] .cards-grid--services,
+body[data-page="services"] .cards-grid--v9{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important;
+  gap:clamp(18px, 1.8vw, 26px) !important;
+  align-items:start !important;
+  grid-auto-rows:auto !important;
+  grid-auto-flow:row !important;
+}
+
+/* On desktop with the left filter: never let grid stretch cards vertically. */
+@media (min-width:901px){
+  body[data-page="services"] #servicesGrid,
+  body[data-page="services"] .cards-grid--services,
+  body[data-page="services"] .cards-grid--v9{
+    align-self:start !important;
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+body[data-page="services"] #servicesGrid .service-card,
+body[data-page="services"] .cards-grid--services .service-card,
+body[data-page="services"] .cards-grid--v9 .service-card{
+  align-self:start !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:clamp(500px, 34vw, 560px) !important;
+  min-height:0 !important;
+  max-height:560px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+  border-radius:22px !important;
+  transform:none !important;
+  transition:transform .34s cubic-bezier(.22,1,.36,1), border-color .34s ease, box-shadow .34s ease !important;
+  contain:layout paint !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card:hover{
+  transform:translateY(-5px) !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__image,
+body[data-page="services"] .cards-grid--services .service-card__image,
+body[data-page="services"] .cards-grid--v9 .service-card__image{
+  flex:0 0 205px !important;
+  height:205px !important;
+  min-height:205px !important;
+  max-height:205px !important;
+  aspect-ratio:auto !important;
+  width:100% !important;
+  overflow:hidden !important;
+  border-radius:22px 22px 0 0 !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__image img,
+body[data-page="services"] .cards-grid--services .service-card__image img,
+body[data-page="services"] .cards-grid--v9 .service-card__image img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__body,
+body[data-page="services"] .cards-grid--services .service-card__body,
+body[data-page="services"] .cards-grid--v9 .service-card__body{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:26px 26px 22px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  overflow:hidden !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__copy{
+  flex:0 1 auto !important;
+  min-height:0 !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card h3{
+  margin:0 0 12px !important;
+  font-size:clamp(24px, 1.7vw, 31px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.035em !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card p{
+  margin:0 !important;
+  font-size:clamp(14px, .92vw, 16px) !important;
+  line-height:1.55 !important;
+  max-height:8.1em !important;
+  overflow:hidden !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__footer{
+  margin-top:auto !important;
+  padding-top:18px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:14px !important;
+  flex:0 0 auto !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__meta{
+  display:block !important;
+  min-height:18px !important;
+  font-size:13px !important;
+  line-height:1.2 !important;
+}
+
+body[data-page="services"] #servicesGrid .service-card__details-btn{
+  min-width:168px !important;
+  min-height:50px !important;
+  padding:0 26px !important;
+  border-radius:14px !important;
+  font-size:13px !important;
+}
+
+/* Prevent the old reveal/adaptation code from changing card dimensions mid-load. */
+body[data-page="services"] #servicesGrid.reveal-group > .service-card,
+body[data-page="services"] #servicesGrid.reveal-group.in-view > .service-card,
+body[data-page="services"] #servicesGrid .service-card.v219-motion-ready{
+  opacity:1 !important;
+  height:clamp(500px, 34vw, 560px) !important;
+  transform:none !important;
+}
+
+body[data-page="services"] #servicesGrid.reveal-group.in-view > .service-card:hover,
+body[data-page="services"] #servicesGrid .service-card.v219-motion-ready:hover{
+  transform:translateY(-5px) !important;
+}
+
+/* Tablet/mobile: compact but still stable, no long stretched plaques. */
+@media (max-width:900px){
+  body[data-page="services"] #servicesGrid,
+  body[data-page="services"] .cards-grid--services,
+  body[data-page="services"] .cards-grid--v9{
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+    align-items:start !important;
+  }
+  body[data-page="services"] #servicesGrid .service-card,
+  body[data-page="services"] #servicesGrid.reveal-group > .service-card,
+  body[data-page="services"] #servicesGrid.reveal-group.in-view > .service-card{
+    height:500px !important;
+    max-height:500px !important;
+  }
+  body[data-page="services"] #servicesGrid .service-card__image{
+    flex-basis:190px !important;
+    height:190px !important;
+    min-height:190px !important;
+    max-height:190px !important;
+  }
+}
+
+@media (max-width:620px){
+  body[data-page="services"] #servicesGrid,
+  body[data-page="services"] .cards-grid--services,
+  body[data-page="services"] .cards-grid--v9{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="services"] #servicesGrid .service-card,
+  body[data-page="services"] #servicesGrid.reveal-group > .service-card,
+  body[data-page="services"] #servicesGrid.reveal-group.in-view > .service-card{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+  }
+  body[data-page="services"] #servicesGrid .service-card__body{
+    min-height:260px !important;
+  }
+  body[data-page="services"] #servicesGrid .service-card p{
+    max-height:none !important;
+  }
+}

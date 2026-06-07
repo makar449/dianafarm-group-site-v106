@@ -1,0 +1,13 @@
+DIANAFARM GROUP v168 — contact reviews and geometry cleanup
+
+Applied from TZ:
+- Cleaned overloaded card corners/shadows in consultation/contact blocks.
+- Added Reviews navigation item in the header.
+- Added animated premium reviews block on Contacts page.
+- Raised Contacts hero/form area and filled empty areas with one dark blue brand background.
+- Rebalanced contact grid so right side is not empty.
+- Removed harsh white line transitions and replaced them with subtle brand-colored borders.
+- Hid extra grey blog recommendation rectangle and made blog article images larger.
+- Compact service cards and improved image object-fit.
+- Kept WhatsApp country animation, with clean opacity/transform behavior.
+- Preserved mobile scroll performance protections.

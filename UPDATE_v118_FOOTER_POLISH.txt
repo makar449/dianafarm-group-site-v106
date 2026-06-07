@@ -1,0 +1,6 @@
+DIANAFARM GROUP v118 Footer Polish
+- Removed public footer link/button "Админ-панель" from all pages.
+- Added animated premium gold underline on footer navigation/contact links.
+- Added animated premium line and lift effect for social pills.
+- Kept admin.html available by direct URL for internal use.
+- Updated CSS/JS cache busting to v=118.

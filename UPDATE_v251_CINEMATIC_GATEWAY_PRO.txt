@@ -1,0 +1,14 @@
+v251 cinematic gateway pro
+
+- Upgraded the Global Gateway animation again, still directly in the website.
+- Rebuilt DOM structure for more cinematic depth and cleaner scene timing.
+- Added camera-like motion, subtle parallax on pointer movement, film-like particles, vignette, deeper lighting.
+- Rebuilt object forms with richer details:
+  passport with layered pages, cover, crest, gold line and shine sweep;
+  metallic key with ring, neck, shaft, teeth and shine;
+  bank card with chip, contactless arcs, embossed-style numbers and material glow;
+  document with folded corner, lines, stamp and signature;
+  shipping container with roof, side, front ribs and lock details.
+- Improved route system with SVG gradients, glow filter and tracer points.
+- Retained controlled size similar to previous animation block, not huge.
+- Static QA passed: JS syntax, missing assets, CSS brace balance.

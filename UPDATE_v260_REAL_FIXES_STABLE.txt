@@ -1,0 +1,13 @@
+v260 real fixes stable
+
+Built from v255 stable base, not from laggy v259.
+Fixes:
+1. Review text/frame overflow fixed with larger inner frame and safer text sizing.
+2. Removed excessive blur from cards; glass is transparent but readable.
+3. “Международный контур” fits inside its card without enlarging the card.
+4. Blog hero cards transparent; title/buttons moved upward.
+5. 3D animation made stable/light: fewer expensive effects, fewer particles, smoother non-laggy motion.
+6. Loader restored but with hard safety timeout, so it cannot hang.
+7. Real-estate stats table reduced to ~50% width on desktop.
+8. Real-estate section title/link centered.
+9. Home “Результат” card uses the same frame/color/size as other process cards.

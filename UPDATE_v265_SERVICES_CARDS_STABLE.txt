@@ -1,0 +1,9 @@
+v265 services cards stable fix
+
+Fixes:
+- Services page cards no longer stretch vertically while opening/loading the section.
+- Cards keep a stable height from the first render.
+- Grid rows no longer force all cards to match a stretched card.
+- Images have a fixed reserved height so loading images cannot pull the card taller.
+- Footer/button stays stable without creating huge empty card bodies.
+- Tablet/mobile keeps compact stable dimensions.

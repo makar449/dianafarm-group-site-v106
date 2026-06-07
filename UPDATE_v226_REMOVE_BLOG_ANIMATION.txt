@@ -1,0 +1,1 @@
+v226: Removed blog hero marquee animation block from blog.html and added hard CSS fallback to hide any remaining blog marquee animation.

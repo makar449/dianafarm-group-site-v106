@@ -1,0 +1,5 @@
+v209 fixes:
+- Parking: forced cards to align on one level, equalized heights and button zones.
+- Real estate: redesigned the 10+/500+/1200+/100%/6-9% proof panel with a more premium look.
+- Home: enlarged the 04 "Реализация" process card so the title has more breathing room.
+- Cache bust updated to v=209.

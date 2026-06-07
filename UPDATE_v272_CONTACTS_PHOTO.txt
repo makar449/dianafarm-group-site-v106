@@ -1,0 +1,1 @@
+v272: replaced contacts hero background photo with the user-uploaded image. Services/admin changes from v271 are preserved.

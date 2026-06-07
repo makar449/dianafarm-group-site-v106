@@ -1,0 +1,1 @@
+v130: grouped contacts socials, premium scrollbar, removed WhatsApp from selling cards/modals, centered arrows, added Agile Business credit, fixed WhatsApp animation rectangle, refined 4+ badge.

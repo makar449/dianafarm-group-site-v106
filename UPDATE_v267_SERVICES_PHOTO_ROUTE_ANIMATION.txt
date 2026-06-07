@@ -1,0 +1,10 @@
+v267 services photo + vertical route animation
+
+Implemented directly on the site:
+- The uploaded hero image from the latest message is stored as:
+  assets/img/v267/services-hero-exact-upload.png
+- services.html now uses it as the real full hero background for "Все услуги".
+- The vertical glowing route animation from the user's reference image is recreated in CSS.
+- The route animation is applied globally to vertical card stacks:
+  .hero__trust-panel, .v9-trust-panel, .v103-hero-proof, .v238-direction-hero__panel.
+- The animation is not a generated image: it is real CSS animation on the website.

@@ -1,0 +1,12 @@
+v254 preloader/i18n fix
+
+Fixed the infinite loading screen:
+- Added immediate inline preloader guard after #pageLoader on every page.
+- Added external v254-loader-guard.js as an additional fallback.
+- Added CSS failsafe so loader cannot stay above the site.
+- Strengthened v247-responsive-final.js loader hiding.
+- Made v252 i18n safer:
+  - no whole-document attribute observer loop;
+  - text/attributes are changed only when the value is actually different;
+  - prevents repeated translation mutation loops.
+- Cache query params bumped to v254.

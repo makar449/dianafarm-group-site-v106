@@ -1,0 +1,6 @@
+v158 hard correction
+- WhatsApp removed from service/blog/list cards and from about/new-era card
+- WhatsApp remains visible in Contacts and inside detail modal opened by Подробнее
+- CSS override restores WhatsApp visibility inside detail modal after older rules hid it
+- About hero title is hard-locked to DIANAFARM / GROUP without standalone О
+- Cache refs bumped to v158

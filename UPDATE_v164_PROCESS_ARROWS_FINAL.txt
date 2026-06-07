@@ -1,0 +1,1 @@
+v164: process arrows rebuilt as separate grid items. No arrow before the first card, arrows only between cards, guaranteed arrow between 04 and 05, text no longer touches arrows or borders.

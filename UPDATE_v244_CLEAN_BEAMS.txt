@@ -1,0 +1,9 @@
+v244 clean beams
+
+- removed extra custom hero illustration scenes (orbit/graph drawings)
+- fixed premium stack cards so they do not stretch / clip on the right
+- kept the premium stack layout and route line between the 3 right cards
+- replaced low-count section beams with one page-level meteor layer inside <main>
+- increased beam count to around 30-35 across the whole service page
+- beams are thin, premium, diagonal, come from different sides, and highlight gold on hover
+- layer stays inside the page content area and does not push the header down

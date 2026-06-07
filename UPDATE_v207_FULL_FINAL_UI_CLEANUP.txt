@@ -1,0 +1,15 @@
+DIANAFARM GROUP — v207 FULL FINAL UI CLEANUP
+
+Done:
+- Home / All Services section labels made compact and premium.
+- Home process 01-05 cards unified; card 02 now uses the same geometry as card 01.
+- Gold arrows centered between 01-05 cards with sequential wave hover.
+- Main page titles lifted closer to the header across the site.
+- Heavy service-page animations stay disabled for all 8 listed service pages.
+- Service page copy max width expanded for better readability.
+- Blog duplicate second marquee line removed and additionally hidden by CSS fallback.
+- Header CTA locked to one line with safe padding.
+- Services listing cards normalized to one height.
+- WhatsApp rotator transition made smoother and calmer.
+- Cars hero animation updated to a lower, sharper Italian supercar silhouette with stronger premium wind-tunnel detail.
+- Cache version bumped to v207.

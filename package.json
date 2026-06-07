@@ -1,0 +1,15 @@
+{
+  "name": "dianafarm-group-site",
+  "version": "179.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "visual:qa": "node tools/visual-agent/visual-check.mjs",
+    "visual:mobile": "node tools/visual-agent/visual-check.mjs --mobile-only",
+    "visual:ai": "node tools/visual-agent/ai-review.mjs",
+    "visual:all": "node tools/visual-agent/visual-check.mjs && node tools/visual-agent/ai-review.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}

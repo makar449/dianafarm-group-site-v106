@@ -1,0 +1,1 @@
+v166: phone-first scroll/performance/layout lock. Keeps WhatsApp rotator animation, disables heavy mobile effects, fixes mobile header, breadcrumbs, hero titles, proof cards, process cards and readable home service text.

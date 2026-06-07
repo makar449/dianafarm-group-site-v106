@@ -1,0 +1,1 @@
+v132: upgraded consultation form to premium glass aurora effect, refined fields/buttons/trust cards, changed Agile credit wording to "Сделано компанией Agile Business". No image generation, code only.

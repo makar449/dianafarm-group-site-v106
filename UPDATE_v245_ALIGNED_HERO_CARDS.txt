@@ -1,0 +1,1 @@
+v245: right hero cards aligned to one vertical level; hover preserved; route line adjusted.

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>DIANAFARM GROUP — рабочая админ панель</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/v279-real-working-admin.css?v=282">
+  <link rel="stylesheet" href="assets/css/v280-admin-full-site-editor.css?v=282">
+</head>
+<body class="admin-body admin-body--v279">
+  <section class="admin-login-v279" id="loginScreen" aria-label="Вход в админ панель">
+    <form class="admin-login-card-v279" id="loginForm">
+      <div class="admin-login-logo-v279">
+        <span>♛</span>
+        <strong>DIANAFARM<br>GROUP</strong>
+        <small>рабочая админ панель</small>
+      </div>
+      <h1>Вход в управление сайтом</h1>
+      <p>Введите пароль администратора. После входа будут доступны реальные разделы сайта: услуги, страницы, блог, отзывы, контакты, заявки, медиа и SEO.</p>
+      <label class="field">
+        <span>Пароль</span>
+        <div class="admin-password-row-v279">
+          <input id="adminPasswordInput" name="password" type="password" autocomplete="current-password" placeholder="Введите пароль">
+          <button class="btn btn--ghost" type="button" data-toggle-password>Показать</button>
+        </div>
+      </label>
+      <button class="btn btn--primary admin-login-submit-v279" type="submit">Войти в админ панель</button>
+      <small class="form-note">По умолчанию пароль берётся из данных сайта: dianafarm2026. Его можно изменить во вкладке “Контакты”.</small>
+    </form>
+  </section>
+
+  <div class="admin-shell hidden" id="adminShell">
+    <aside class="admin-sidebar">
+      <a class="admin-brand-v279" href="admin.html" aria-label="DIANAFARM GROUP">
+        <span class="admin-brand-crown-v279">♛</span>
+        <strong>DIANAFARM<br>GROUP</strong>
+        <small>админ панель</small>
+      </a>
+
+      <nav class="admin-nav" id="adminNav" aria-label="Навигация админ панели">
+        <div class="admin-nav-group-v279 admin-nav-group-zero-v282"><span>0</span><b>Инструкция</b></div>
+        <button class="active" type="button" data-admin-tab="instructions"><i>?</i><span>Как пользоваться</span></button>
+
+        <div class="admin-nav-group-v279"><span>1</span><b>Основное управление</b></div>
+        <button type="button" data-admin-tab="dashboard"><i>⌂</i><span>Главная</span></button>
+        <button type="button" data-admin-tab="sitePages"><i>▤</i><span>Основные страницы</span></button>
+        <button type="button" data-admin-tab="services"><i>▱</i><span>Услуги</span></button>
+        <button type="button" data-admin-tab="contacts"><i>☎</i><span>Контакты и WhatsApp</span></button>
+        <button type="button" data-admin-tab="leads"><i>▩</i><span>Заявки</span></button>
+
+        <div class="admin-nav-group-v279"><span>2</span><b>Каталоги и карточки</b></div>
+        <button type="button" data-admin-tab="homeBlocks"><i>▦</i><span>Блоки главной</span></button>
+        <button type="button" data-admin-tab="realEstate"><i>⌂</i><span>Недвижимость</span></button>
+        <button type="button" data-admin-tab="cars"><i>◈</i><span>Автомобили</span></button>
+        <button type="button" data-admin-tab="parkings"><i>▣</i><span>Паркинги</span></button>
+        <button type="button" data-admin-tab="b2bOffers"><i>◫</i><span>B2B предложения</span></button>
+        <button type="button" data-admin-tab="promotions"><i>✦</i><span>Акции</span></button>
+
+        <div class="admin-nav-group-v279"><span>3</span><b>Контент и доверие</b></div>
+        <button type="button" data-admin-tab="blogArticles"><i>▧</i><span>Блог</span></button>
+        <button type="button" data-admin-tab="blogTopics"><i>☰</i><span>Темы блога и услуг</span></button>
+        <button type="button" data-admin-tab="reviews"><i>☆</i><span>Отзывы</span></button>
+        <button type="button" data-admin-tab="socialLinks"><i>◎</i><span>Соцсети</span></button>
+
+        <div class="admin-nav-group-v279"><span>4</span><b>Система</b></div>
+        <button type="button" data-admin-tab="seo"><i>⌕</i><span>SEO</span></button>
+        <button type="button" data-admin-tab="integrations"><i>⚙</i><span>Интеграции</span></button>
+        <button type="button" data-admin-tab="backup"><i>⇩</i><span>Backup / JSON</span></button>
+      </nav>
+
+      <div class="admin-sidebar-footer-v279">
+        <a class="btn admin-sidebar-link-v279" href="index.html" target="_blank" rel="noopener">Открыть сайт</a>
+        <button class="btn btn--ghost" id="logoutBtn" type="button">Выйти</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-topbar-left-v279">
+          <button class="admin-mobile-toggle-v279" type="button" data-admin-mobile-toggle>☰</button>
+          <div>
+            <p class="eyebrow">DIANAFARM GROUP · CMS CONTROL</p>
+            <h1 id="adminTitle">Главная страница админ панели</h1>
+            <div class="admin-live-status-v279" id="adminLiveStatus">
+              <span class="admin-live-dot-v279"></span>
+              <div>
+                <b>Готово к работе</b>
+                <small>Все кнопки подключены к реальной админ-логике сайта.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-actions admin-actions-top-v279">
+          <button class="btn btn--primary" id="saveAllBtn" type="button">Опубликовать сайт</button>
+          <button class="btn btn--ghost" type="button" data-preview-site="index.html">Предпросмотр</button>
+          <a class="btn" href="index.html" target="_blank" rel="noopener">Перейти на сайт</a>
+        </div>
+      </header>
+
+      <section id="adminContent" class="admin-content-v279" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <dialog class="admin-editor-modal-v279" id="adminEditorModal">
+    <div id="adminEditorContent"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/data.js?v=282" defer></script>
+  <script src="assets/js/backend-config.js?v=282" defer></script>
+  <script src="assets/js/remote-backend.js?v=282" defer></script>
+  <script src="assets/js/admin.js?v=282" defer></script>
+  <script src="assets/js/v279-real-working-admin-polish.js?v=279" defer></script>
+  <script src="assets/js/v280-admin-full-site-editor.js?v=282" defer></script>
+</body>
+</html>

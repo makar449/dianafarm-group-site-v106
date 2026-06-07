@@ -1,0 +1,5 @@
+v215 urgent fix:
+- Increased and widened the 04 "Сопровождение" process card on the home page.
+- Prevented the word "Сопровождение" from clipping or touching the card border.
+- Added more right/inside padding and adjusted the column proportions.
+- Cache bust updated to v=215.

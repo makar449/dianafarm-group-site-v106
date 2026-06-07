@@ -1,0 +1,1 @@
+v115: Consultation modal header polished: experience badge moved to the right of title, subtitle width tightened, em dash replaced with short hyphen in form lead text, consultation trust chips reduced to avoid duplication.

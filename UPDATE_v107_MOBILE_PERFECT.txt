@@ -1,0 +1,14 @@
+DIANAFARM GROUP — v107 Mobile Perfect Adaptation
+
+Focus:
+- fixed mobile header proportions and logo scale;
+- improved mobile language dropdown RU / BG / KA / EN;
+- fixed hero title overflow on iPhone screens;
+- made cookie banner compact and premium on mobile;
+- improved mobile consultation modal, fields and trust chips;
+- improved mobile filter panel and dropdowns;
+- ensured catalog filters visually appear before listings;
+- reduced horizontal overflow risk across mobile pages;
+- added cache-busting query parameters for CSS/JS.
+
+Desktop layout intentionally preserved.

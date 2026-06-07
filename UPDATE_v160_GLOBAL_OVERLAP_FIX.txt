@@ -1,0 +1,1 @@
+v160: global card/proof/modal text overlap fix. Number circles and copy columns separated, no text crossing borders.

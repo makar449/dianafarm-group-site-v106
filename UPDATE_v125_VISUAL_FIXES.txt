@@ -1,0 +1,1 @@
+v125 visual fixes: visible warm headings, premium footer contacts, fixed FB social icon, gold modal close, shifted experience badge, consultation line break, premium modal scrollbar, separated language dropdown, protected reveal visibility.

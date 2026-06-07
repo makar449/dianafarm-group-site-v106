@@ -1,0 +1,6 @@
+v216 fixes
+- BLOG: limited double marquee to safe zone on desktop so it does not overlap the right guide frame.
+- BLOG: strengthened right guide card surface/layering.
+- CARS: removed car silhouette from hero animation.
+- CARS: added animated road/highway perspective with faster wind and road motion.
+- Cache bumped to v=216.

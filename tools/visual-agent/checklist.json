@@ -1,0 +1,31 @@
+{
+  "brand": "DIANAFARM GROUP",
+  "mustKeep": [
+    "WhatsApp country animation must remain enabled",
+    "Main dark-blue and gold premium visual language must remain consistent",
+    "No generated images are required for QA",
+    "Mobile scrolling must remain smooth and usable"
+  ],
+  "visualChecks": [
+    "No text overlaps borders, icons, cards, or other text",
+    "No words are broken in the middle unless intentionally hyphenated",
+    "No large empty hero areas on Blog, Services, UAE/Dubai, Asia, and service pages",
+    "Process cards 01-05 are not squeezed into narrow columns",
+    "Footer contacts icons and text are aligned and readable",
+    "Service card buttons are aligned and do not jump by text length",
+    "Blog cards have readable titles, balanced photos, and no gray accidental blocks",
+    "Reviews page looks like a full premium section, not a small contact block",
+    "Mobile navigation, scrolling, and tap targets work without horizontal overflow"
+  ],
+  "criticalPages": [
+    "index.html",
+    "services.html",
+    "blog.html",
+    "contacts.html",
+    "reviews.html",
+    "service-international-trade.html",
+    "service-pharma-consulting.html",
+    "uae.html",
+    "asia.html"
+  ]
+}

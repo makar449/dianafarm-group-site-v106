@@ -1,0 +1,9 @@
+v264 deep quality fix
+
+Implemented based on visual QA screenshots:
+- Added premium visual card to contacts section using provided image.
+- Removed blur/backdrop blur from the complained cards/filters/hero blocks.
+- Rebuilt reviews cards geometry and the review list cards.
+- Straightened service/blog hero side cards and lifted hero copy upward.
+- Added premium entrance/hover motion to process cards.
+- Upgraded catalog filters with cleaner geometry and premium arrow buttons.

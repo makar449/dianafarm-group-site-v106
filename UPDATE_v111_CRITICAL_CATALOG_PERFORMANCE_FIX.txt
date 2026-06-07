@@ -1,0 +1,10 @@
+DIANAFARM GROUP — v111 Critical Catalog + Performance Fix
+
+Fixed:
+1. Real estate, cars and parking filters are moved into a premium catalog layout before/next to listings, not near the footer.
+2. Filter search no longer re-renders the filter panel on every typed character, so input focus is stable.
+3. Search now checks all available object fields and multilingual values, not only the currently visible label.
+4. B2B categories stay above the B2B cards and category groups remain clearly separated.
+5. First-load image behavior updated: early/hero images are eager, rest are async/lazy with fallback image protection.
+6. Added catalog layout CSS for desktop side filters and mobile top filters.
+7. Updated cache busting to v=111 and storage keys to avoid stale browser data.

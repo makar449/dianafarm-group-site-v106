@@ -1,0 +1,8 @@
+v120 Readability + Form Compact + Warm Accent Polish
+- Increased small text under headings and card descriptions.
+- Increased text size on oval buttons / social pills / CTA controls.
+- Reduced consultation form size while keeping premium layout.
+- Rebalanced form trust cards to avoid ugly mid-word breaks.
+- Kept WhatsApp country buttons because they are required in the original TZ, but made them more balanced.
+- Shifted gold accents toward a warmer light orange-brown palette.
+- Updated cache to v=120.

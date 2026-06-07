@@ -1,0 +1,1 @@
+v232: Added premium lightweight admin micro-animations: animated background glow, staggered cards, button shine/ripple, modal transitions, field focus glow, save sparkles, table hover motion. Public site structure kept unchanged.

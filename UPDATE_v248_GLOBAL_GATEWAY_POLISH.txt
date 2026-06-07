@@ -1,0 +1,23 @@
+v248 Global Gateway polish
+
+Implemented on the website, not as generated pictures:
+1) Reviews testimonial card:
+   - larger silver/grey frame;
+   - more padding and taller card;
+   - text no longer collides with frame;
+   - stronger premium glass style.
+
+2) Three premium cards / service cards:
+   - added lift-up hover;
+   - added premium shine sweep;
+   - improved gold accents and shadows;
+   - applied to reviews cards and similar blocks across service pages.
+
+3) Direction-page 3D animation:
+   - replaced old canvas line-art with a DOM/CSS animated “Global Gateway” 7–10 second loop;
+   - globe appears;
+   - UAE / Asia regions pulse;
+   - routes draw from the globe;
+   - passport, key, bank card, document, and container animate in;
+   - glass panel with rubric title appears;
+   - final DIANAFARM GROUP brand lockup appears.

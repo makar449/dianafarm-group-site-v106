@@ -1,0 +1,6 @@
+v212 fixes:
+- Blog: removed the grey rounded single topic strip look and restored the old premium double marquee with hover/pause effects.
+- Blog: made the right navigation card inner frame fill the card, with larger readable text and safer chip layout.
+- Contacts: social network groups are collapsed by default.
+- Home: restored the original transparent trust-card size/feel.
+- Cache bust updated to v=212 for CSS, app.js and i18n.

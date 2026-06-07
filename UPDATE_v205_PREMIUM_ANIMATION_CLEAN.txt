@@ -1,0 +1,11 @@
+DIANAFARM GROUP — UPDATE v205 PREMIUM ANIMATION CLEAN
+
+Done:
+- upgraded premium hero animations for real-estate and cars
+- real-estate scene is now a larger luxury architectural blueprint composition
+- cars scene is now a larger premium supercar silhouette inspired by Ferrari proportions
+- removed all text labels from hero animations (BLUEPRINT / AERODYNAMICS / SMART RADAR)
+- kept parking scene size safe while removing text label
+- increased canvas presence for real-estate and cars only
+- reinforced services / asia title wording in i18n with hard line-break protection
+- bumped cache version to v205

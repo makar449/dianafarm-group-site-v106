@@ -1,0 +1,8 @@
+UPDATE v227 — remove cars/parking + admin block delete
+
+- Public site: removed Cars and Parking sections from navigation, footer, sitemap and service catalog filters.
+- Data: removed car and parking service cards from default data; cleared cars and parkings arrays; removed related blog article; changed localStorage key to avoid stale browser cache from old versions.
+- Files: removed cars.html and parking.html from the build.
+- Admin panel: removed Cars/Parking tabs and quick actions from the UI.
+- Admin panel: added hard delete action for homepage blocks in “Порядок блоков”. Deleted block IDs are stored in settings.deletedBlocks and are hidden on the public site.
+- Cache: bumped CSS/JS asset query versions to v227.

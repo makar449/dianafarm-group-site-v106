@@ -1,0 +1,1 @@
+v221: based on v220. Fixed home process card 04 size, removed unsuitable arrows on home, cleaned service detail processes to four cards, added premium All Services filters, extended the blog double marquee without overlapping the right guide card, removed lower grey blog ticker, centered blog guide arrows, and changed trythis label to plain trythis.

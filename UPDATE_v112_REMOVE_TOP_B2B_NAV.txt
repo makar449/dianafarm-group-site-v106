@@ -1,0 +1,1 @@
+v112: removed separate top-level B2B Offers item from the main header navigation on all pages. B2B content/page remains available through services/internal links, so nothing is lost. Cache busting updated to v112.
