@@ -1,0 +1,9 @@
+{
+  "name": "DIANAFARM GROUP",
+  "short_name": "DIANAFARM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07111D",
+  "theme_color": "#07111D",
+  "description": "International consulting platform for Bulgaria, EU, UAE and Asia."
+}

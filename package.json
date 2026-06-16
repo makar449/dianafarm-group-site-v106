@@ -1,0 +1,36 @@
+{
+  "name": "dianafarm-group-production",
+  "version": "303.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:server": "tsc -p tsconfig.json",
+    "start:production": "node dist/server/src/index.js",
+    "verify:syntax": "node tools/verify-syntax.mjs",
+    "verify:links": "node tools/verify-links.mjs",
+    "verify:server-smoke": "node tools/server-smoke.mjs",
+    "verify:production": "npm run build:server && npm run verify:syntax && npm run verify:links && npm run verify:v303-mobile-desktop-3d && npm run verify:server-smoke",
+    "visual:qa": "node tools/verify-v291-final.mjs",
+    "visual:mobile": "node tools/verify-v291-final.mjs",
+    "visual:all": "node tools/verify-v291-final.mjs && npm run verify:server-smoke",
+    "verify:mobile": "node tools/verify-v291-final.mjs",
+    "env:generate": "node tools/generate-production-env.mjs",
+    "verify:v291-final": "node tools/verify-v291-final.mjs",
+    "verify:v292-github-admin": "node tools/verify-v292-github-admin.mjs",
+    "verify:v293-mobile-parity": "node tools/verify-v293-mobile-parity.mjs",
+    "verify:v294-final": "node tools/verify-v294-final.mjs",
+    "verify:v295-i18n-links": "node tools/verify-v295-i18n-links.mjs",
+    "verify:v296-i18n-overflow": "node tools/verify-v296-i18n-overflow.mjs",
+    "verify:v297-dubai-catalog": "node tools/verify-v297-dubai-catalog.mjs",
+    "verify:v298-final-system": "node tools/verify-v298-final-system.mjs",
+    "verify:v299-actual-fix": "node tools/verify-v299-actual-fix.mjs",
+    "verify:v300-real-admin-sync": "node tools/verify-v300-real-admin-sync.mjs",
+    "verify:v301-i18n-complete": "node tools/verify-v301-i18n-complete.mjs",
+    "verify:v302-targeted": "node tools/verify-v302-targeted.mjs",
+    "verify:v303-mobile-desktop-3d": "node tools/verify-v303-mobile-desktop-3d.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.15.30"
+  }
+}

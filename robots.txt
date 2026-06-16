@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /api/
+Sitemap: __DFG_PUBLIC_ORIGIN__/sitemap.xml

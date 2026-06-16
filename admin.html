@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>DIANAFARM GROUP — production CMS</title>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/css/admin-production-v289.css?v=301" rel="stylesheet"/></head>
+<body class="admin-body admin-body--v279">
+<section aria-label="Вход в админ панель" class="admin-login-v279" id="loginScreen">
+<form class="admin-login-card-v279" id="loginForm">
+<div class="admin-login-logo-v279">
+<span>♛</span>
+<strong>DIANAFARM<br/>GROUP</strong>
+<small>production CMS</small>
+</div>
+<h1>Вход в управление сайтом</h1>
+<p>Введите пароль администратора. После входа будут доступны реальные разделы сайта: услуги, страницы, блог, отзывы, контакты, заявки, медиа и SEO.</p>
+<label class="field">
+<span>Пароль</span>
+<div class="admin-password-row-v279">
+<input autocomplete="current-password" id="adminPasswordInput" name="password" placeholder="Введите пароль" type="password"/>
+<button class="btn btn--ghost" data-toggle-password="" type="button">Показать</button>
+</div>
+</label>
+<button class="btn btn--primary admin-login-submit-v279" type="submit">Войти в админ панель</button>
+<small class="form-note">Важно: в v284 пароль не хранится во frontend. Вход работает через production-сервер, session-cookie и CSRF. Пароль задаётся в .env.production.local.</small>
+</form>
+</section>
+<div class="admin-shell hidden" id="adminShell">
+<aside class="admin-sidebar">
+<a aria-label="DIANAFARM GROUP" class="admin-brand-v279" href="admin.html">
+<span class="admin-brand-crown-v279">♛</span>
+<strong>DIANAFARM<br/>GROUP</strong>
+<small>админ панель</small>
+</a>
+<nav aria-label="Навигация админ панели" class="admin-nav" id="adminNav">
+<div class="admin-nav-group-v279 admin-nav-group-zero-v282"><span>0</span><b>Инструкция</b></div>
+<button class="active" data-admin-tab="instructions" type="button"><i>?</i><span>Как пользоваться</span></button>
+<div class="admin-nav-group-v279"><span>1</span><b>Основное управление</b></div>
+<button data-admin-tab="dashboard" type="button"><i>⌂</i><span>Главная</span></button>
+<button data-admin-tab="sitePages" type="button"><i>▤</i><span>Основные страницы</span></button>
+<button data-admin-tab="services" type="button"><i>▱</i><span>Услуги</span></button>
+<button data-admin-tab="contacts" type="button"><i>☎</i><span>Контакты и WhatsApp</span></button>
+<button data-admin-tab="leads" type="button"><i>▩</i><span>Заявки</span></button>
+<div class="admin-nav-group-v279"><span>2</span><b>Каталоги и карточки</b></div>
+<button data-admin-tab="homeBlocks" type="button"><i>▦</i><span>Блоки главной</span></button>
+<button data-admin-tab="realEstate" type="button"><i>⌂</i><span>Недвижимость</span></button>
+<button data-admin-tab="cars" type="button"><i>◈</i><span>Автомобили</span></button>
+<button data-admin-tab="parkings" type="button"><i>▣</i><span>Паркинги</span></button>
+<button data-admin-tab="b2bOffers" type="button"><i>◫</i><span>B2B предложения</span></button>
+<button data-admin-tab="promotions" type="button"><i>✦</i><span>Акции</span></button>
+<div class="admin-nav-group-v279"><span>3</span><b>Контент и доверие</b></div>
+<button data-admin-tab="blogArticles" type="button"><i>▧</i><span>Блог</span></button>
+<button data-admin-tab="blogTopics" type="button"><i>☰</i><span>Темы блога и услуг</span></button>
+<button data-admin-tab="reviews" type="button"><i>☆</i><span>Отзывы</span></button>
+<button data-admin-tab="socialLinks" type="button"><i>◎</i><span>Соцсети</span></button>
+<div class="admin-nav-group-v279"><span>4</span><b>Система</b></div>
+<button data-admin-tab="seo" type="button"><i>⌕</i><span>SEO</span></button>
+<button data-admin-tab="integrations" type="button"><i>⚙</i><span>Интеграции</span></button>
+<button data-admin-tab="backup" type="button"><i>⇩</i><span>Backup / JSON</span></button>
+</nav>
+<div class="admin-sidebar-footer-v279">
+<a class="btn admin-sidebar-link-v279" href="index.html" rel="noopener" target="_blank">Открыть сайт</a>
+<button class="btn btn--ghost" id="logoutBtn" type="button">Выйти</button>
+</div>
+</aside>
+<main class="admin-main">
+<header class="admin-topbar">
+<div class="admin-topbar-left-v279">
+<button class="admin-mobile-toggle-v279" data-admin-mobile-toggle="" type="button">☰</button>
+<div>
+<p class="eyebrow">DIANAFARM GROUP · CMS CONTROL</p>
+<h1 id="adminTitle">Главная страница админ панели</h1>
+<div class="admin-live-status-v279" id="adminLiveStatus">
+<span class="admin-live-dot-v279"></span>
+<div>
+<b>Готово к работе</b>
+<small>Все кнопки подключены к реальной админ-логике сайта.</small>
+</div>
+</div>
+</div>
+</div>
+<div class="admin-actions admin-actions-top-v279">
+<button class="btn btn--primary" id="saveAllBtn" type="button">Опубликовать сайт</button>
+<button class="btn btn--ghost" data-preview-site="index.html" type="button">Предпросмотр</button>
+<a class="btn" href="index.html" rel="noopener" target="_blank">Перейти на сайт</a>
+</div>
+</header>
+<section aria-live="polite" class="admin-content-v279" id="adminContent"></section>
+</main>
+</div>
+<dialog class="admin-editor-modal-v279" id="adminEditorModal">
+<div id="adminEditorContent"></div>
+</dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script defer="" src="assets/js/data.js?v=303"></script><script defer="" src="assets/js/production-config.js?v=303"></script><script defer="" src="assets/js/backend-config.js?v=303"></script><script defer="" src="assets/js/remote-backend.js?v=303"></script><script defer="" src="assets/js/admin.js?v=301"></script><script defer="" src="assets/js/v280-admin-full-site-editor.js?v=301"></script></body>
+</html>
